@@ -1,0 +1,19 @@
+{
+  "name": "helix-react",
+  "version": "0.1.0",
+  "description": "React components to wrap HelixUI custom elements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rackerlabs/helix-react.git"
+  },
+  "author": "Ryan A. Johnson <rhino.citguy@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/rackerlabs/helix-react/issues"
+  },
+  "homepage": "https://github.com/rackerlabs/helix-react#readme"
+}
