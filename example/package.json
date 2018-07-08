@@ -1,0 +1,22 @@
+{
+  "name": "helix-react-example",
+  "homepage": "https://nicko-winnner.github.io/helix-react",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "helix-react": "link:..",
+    "react-scripts": "^1.1.1",
+    "helix-ui": "^0.10"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "poststart": "scripts/poststart.sh",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

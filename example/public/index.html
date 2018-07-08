@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+
+    <link href="%PUBLIC_URL%/assets/index.css" rel="stylesheet" />
+
+    <!-- Helix Css -->
+    <link href="%PUBLIC_URL%/assets/helix-ui.css" rel="stylesheet" />
+
+    <!-- Polyfill Loader -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+
+    <!-- Web Components Loader -->
+    <script src="https://ab2b55b0a26bb32fdc01-2c8b94bcec8e01c366189541a4035ea4.ssl.cf5.rackcdn.com/webcomponents-loader.js"></script>
+
+    <title>helix-react</title>
+  </head>
+
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+
+    <div id="root"></div>
+
+    <!-- ES5 Adapter -->
+    <span id="ce-es5-adapter">
+    <script>
+      if (!window.customElements) {
+        var elAdapter = document.querySelector('#ce-es5-adapter');
+        elAdapter.parentElement.removeChild(elAdapter);
+      }
+    </script>
+    <script src="https://ab2b55b0a26bb32fdc01-2c8b94bcec8e01c366189541a4035ea4.ssl.cf5.rackcdn.com/custom-elements-es5-adapter.js"></script>
+  </span>
+    <script src="%PUBLIC_URL%/assets/helix-ui.browser.js"></script>
+  </body>
+</html>
