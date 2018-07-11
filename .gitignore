@@ -1,4 +1,17 @@
-.DS_Store
+# dependencies
 node_modules
+
+# builds
+built
+dist
+public
+
+# debug files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Miscellaneous
 *.swp
-dist/
+.DS_Store
+.idea/

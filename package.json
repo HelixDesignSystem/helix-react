@@ -4,7 +4,9 @@
   "description": "React components to wrap HelixUI custom elements",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start-storybook -p 9001 -c .storybook",
+    "docs": "build-storybook -c .storybook -o public"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/rackerlabs/helix-react/issues"
   },
-  "homepage": "https://github.com/rackerlabs/helix-react#readme"
+  "homepage": "https://github.com/rackerlabs/helix-react#readme",
+  "devDependencies": {
+    "@storybook/react": "^3.4.8",
+    "babel-core": "^6.26.3",
+    "helix-ui": "^0.11.0",
+    "prop-types": "15",
+    "react": "15",
+    "react-dom": "15"
+  }
 }
