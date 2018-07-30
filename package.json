@@ -4,6 +4,7 @@
   "description": "React components to wrap HelixUI custom elements",
   "module": "src/index.mjs",
   "scripts": {
+    "install:clean": "rm -rf node_modules && yarn install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "start-storybook -p 9001 -c .storybook",
     "docs": "build-storybook -c .storybook -o public"
@@ -19,9 +20,15 @@
   },
   "homepage": "https://github.com/rackerlabs/helix-react#readme",
   "devDependencies": {
-    "@storybook/react": "^3.4.8",
-    "babel-core": "^6.26.3",
-    "helix-ui": "^0.11.0",
+    "@storybook/addon-actions": "3",
+    "@storybook/addon-knobs": "3",
+    "@storybook/addon-options": "3",
+    "@storybook/addon-viewport": "3",
+    "@storybook/addons": "3",
+    "@storybook/react": "3",
+    "babel-core": "6",
+    "babel-runtime": "6",
+    "helix-ui": "^0.12.0",
     "prop-types": "15",
     "react": "15",
     "react-dom": "15"
