@@ -2,7 +2,7 @@
 import Button from './Button';
 import Icon from './Icon';
 
-export {
+export default {
     Button,
     Icon,
-}
+};
