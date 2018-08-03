@@ -2,7 +2,7 @@
   "name": "helix-react",
   "version": "0.1.0",
   "description": "React components to wrap HelixUI custom elements",
-  "main": "index.js",
+  "module": "src/index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "start-storybook -p 9001 -c .storybook",
