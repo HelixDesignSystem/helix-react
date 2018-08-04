@@ -1,5 +1,5 @@
 {
-  "name": "helix-react",
+  "name": "@helix-design-system/helix-react",
   "version": "0.1.0",
   "description": "React components to wrap HelixUI custom elements",
   "module": "src/index.mjs",
@@ -11,14 +11,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rackerlabs/helix-react.git"
+    "url": "git+https://github.com/HelixDesignSystem/helix-react.git"
   },
   "author": "Ryan A. Johnson <rhino.citguy@gmail.com>",
+  "contributors": [
+    "Cathy Siller"
+  ],
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/rackerlabs/helix-react/issues"
+    "url": "https://github.com/HelixDesignSystem/helix-react/issues"
   },
-  "homepage": "https://github.com/rackerlabs/helix-react#readme",
+  "homepage": "https://helix-react.netlify.com/",
+  "publishConfig": {
+    "access": "public",
+    "scope": "@helix-design-system"
+  },
   "devDependencies": {
     "@storybook/addon-actions": "3",
     "@storybook/addon-knobs": "3",
