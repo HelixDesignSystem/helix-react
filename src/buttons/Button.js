@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from '../Icon';
+import { Icon } from '../icons';
 
 function cssFor (modifier) {
     return {
@@ -13,14 +13,24 @@ function cssFor (modifier) {
 
 function classNames (props) {
     return [
-        'hxBtn', 
-        cssFor(props.variant), 
-        cssFor(props.size), 
+        'hxBtn',
+        cssFor(props.variant),
+        cssFor(props.size),
         props.className,
     ].join(' ').trim();
 }
 
-class Button extends React.Component {
+export class Button extends React.Component {
+    static propTypes = {
+        busy: PropTypes.bool,
+        disabled: PropTypes.bool,
+        tailIcon: PropTypes.string,
+        headIcon: PropTypes.string,
+        size: PropTypes.string,
+        type: PropTypes.string,
+        variant: PropTypes.string,
+    }
+
     render () {
         // destructure props for JSX composition
         const {
@@ -36,7 +46,7 @@ class Button extends React.Component {
         } = this.props;
 
         return (
-            <button 
+            <button
                 className={classNames(this.props)}
                 type={type || 'button'}
                 {...props}
@@ -52,15 +62,3 @@ class Button extends React.Component {
         );
     }
 }
-
-Button.propTypes = {
-    busy: PropTypes.bool,
-    disabled: PropTypes.bool,
-    headIcon: PropTypes.string,
-    size: PropTypes.string,
-    tailIcon: PropTypes.string,
-    type: PropTypes.string,
-    variant: PropTypes.string,
-};
-
-export default Button;

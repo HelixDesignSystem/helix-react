@@ -1,6 +1,6 @@
-import Button from './';
-import { Icons } from '../Icon';
 import React from 'react';
+import { Button } from './Button';
+import { ICONS } from '../icons';
 import { storiesOf } from '@storybook/react';
 import { boolean, select, text } from '@storybook/addon-knobs/react';
 
@@ -19,7 +19,7 @@ storiesOf('Button', module)
 .add('Sizes', () => {
     const size = select('size', SIZES, '');
     return (
-        <Button 
+        <Button
             { ...( size && { size }) }
         >{SIZES[size]} Button</Button>
     );
@@ -27,22 +27,22 @@ storiesOf('Button', module)
 .add('Variants', () => {
     const variant = select('variant', VARIANTS, '');
     return (
-        <Button 
+        <Button
             { ...(variant && { variant }) }
         >{VARIANTS[variant]} Button</Button>
     );
 })
 .add('Icon Only', () => {
-    const headIcon = select('headIcon', Icons, 'download').trim();
+    const headIcon = select('headIcon', ICONS, 'download').trim();
     return (<Button { ...( headIcon && { headIcon }) }/>);
 })
 .add('Icons and Text', () => {
     const innerText = text('(innerText)', 'Action');
-    const headIcon = select('headIcon', ['', ...Icons], 'cog').trim();
-    const tailIcon = select('tailIcon', ['', ...Icons], 'angle-down').trim();
+    const headIcon = select('headIcon', ['', ...ICONS], 'cog').trim();
+    const tailIcon = select('tailIcon', ['', ...ICONS], 'angle-down').trim();
 
     return (
-        <Button 
+        <Button
             { ...( headIcon && { headIcon }) }
             { ...( tailIcon && { tailIcon }) }
         >{innerText}</Button>
@@ -64,9 +64,9 @@ storiesOf('Button', module)
     let busy = boolean('busy', false);
     let cssClasses = text('class', '');
     let disabled = boolean('disabled', false);
-    let headIcon = select('headIcon', ['', ...Icons], '').trim();
+    let headIcon = select('headIcon', ['', ...ICONS], '').trim();
     let size = select('size', SIZES, '');
-    let tailIcon = select('tailIcon', ['', ...Icons], '').trim();
+    let tailIcon = select('tailIcon', ['', ...ICONS], '').trim();
     let variant = select('variant', VARIANTS, '');
 
     if (innerText.trim() === '') {
@@ -81,7 +81,7 @@ storiesOf('Button', module)
 
     /* ========== OUTPUT ========== */
     return (
-        <Button 
+        <Button
             { ...( cssClasses && { className: cssClasses }) }
             { ...( busy && { busy }) }
             { ...( disabled && { disabled }) }
