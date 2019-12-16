@@ -2,7 +2,6 @@ import React from 'react';
 import HelixUI from 'helix-ui/dist/js/helix-ui.cjs';
 import PropTypes from 'prop-types';
 
-console.log(HelixUI);
 export const Icons = Object.keys(HelixUI.Utils.ICONS);
 
 class Icon extends React.Component {
