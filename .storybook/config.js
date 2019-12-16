@@ -3,9 +3,8 @@ import { setOptions } from '@storybook/addon-options';
 import { withKnobs } from '@storybook/addon-knobs';
 
 // Initialize HelixUI and load CSS
-import HelixUI from 'helix-ui';
-import 'helix-ui/dist/styles/helix-ui.min.css';
-HelixUI.initialize();
+import HelixUI from 'helix-ui/dist/js/helix-ui.cjs';
+import 'helix-ui/dist/css/helix-ui.min.css';
 
 addDecorator(withKnobs);
 setOptions({
@@ -60,7 +59,6 @@ setOptions({
     sidebarAnimations: true,
 });
 
-// Requires require.context from Webpack
 // See https://webpack.js.org/guides/dependency-management/#require-context
 const req = require.context('../src', true, /stories\.js$/);
 
@@ -68,4 +66,6 @@ function loadStories () {
     req.keys().forEach((filename) => req(filename));
 }
 
-configure(loadStories, module);
+HelixUI.initialize().then(() => {
+    configure(loadStories, module);
+});

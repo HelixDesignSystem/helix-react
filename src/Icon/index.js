@@ -1,19 +1,20 @@
 import React from 'react';
-import HelixUI from 'helix-ui';
+import HelixUI from 'helix-ui/dist/js/helix-ui.cjs';
 import PropTypes from 'prop-types';
 
-export const Icons = Object.keys(HelixUI.ICONS);
+console.log(HelixUI);
+export const Icons = Object.keys(HelixUI.Utils.ICONS);
 
 class Icon extends React.Component {
     render () {
-        const { 
-            type, 
-            ...props 
+        const {
+            type,
+            ...props
         } = this.props;
 
         return (
-            <hx-icon 
-                type={type} 
+            <hx-icon
+                type={type}
                 {...props}
             ></hx-icon>
         );
