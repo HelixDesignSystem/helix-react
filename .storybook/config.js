@@ -3,7 +3,7 @@ import { setOptions } from '@storybook/addon-options';
 import { withKnobs } from '@storybook/addon-knobs';
 
 // Initialize HelixUI and load CSS
-import HelixUI from 'helix-ui/dist/js/helix-ui.cjs';
+import HelixUI from 'helix-ui';
 import 'helix-ui/dist/css/helix-ui.min.css';
 
 addDecorator(withKnobs);
