@@ -4,8 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 
 // Initialize HelixUI and load CSS
 import HelixUI from 'helix-ui';
-import 'helix-ui/dist/styles/helix-ui.min.css';
-HelixUI.initialize();
+import 'helix-ui/dist/css/helix-ui.min.css';
 
 addDecorator(withKnobs);
 setOptions({
@@ -69,3 +68,7 @@ function loadStories () {
 }
 
 configure(loadStories, module);
+
+HelixUI.initialize().then(() => {
+    configure(loadStories, module);
+});
