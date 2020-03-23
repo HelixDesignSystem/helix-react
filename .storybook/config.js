@@ -67,8 +67,6 @@ function loadStories () {
     req.keys().forEach((filename) => req(filename));
 }
 
-configure(loadStories, module);
-
 HelixUI.initialize().then(() => {
     configure(loadStories, module);
 });

@@ -15,7 +15,10 @@
   },
   "author": "Ryan A. Johnson <rhino.citguy@gmail.com>",
   "contributors": [
-    "Cathy Siller"
+    "Mike Mangialardi",
+    "James Thompson",
+    "Cathy Siller",
+    "Nicko Winner-Arroyo"
   ],
   "license": "Apache-2.0",
   "bugs": {
@@ -36,8 +39,9 @@
     "babel-core": "6",
     "babel-runtime": "6",
     "helix-ui": "^0.19.0",
-    "prop-types": "15",
-    "react": "15",
-    "react-dom": "15"
-  }
+    "prop-types": "^15.7.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "dependencies": {}
 }
