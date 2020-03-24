@@ -6,8 +6,10 @@
   "scripts": {
     "install:clean": "rm -rf node_modules && yarn install",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "start-storybook -p 9001 -c .storybook",
-    "docs": "build-storybook -c .storybook -o public"
+    "start": "yarn storybook",
+    "docs": "build-storybook -c .storybook -o public",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -15,7 +17,10 @@
   },
   "author": "Ryan A. Johnson <rhino.citguy@gmail.com>",
   "contributors": [
-    "Cathy Siller"
+    "Mike Mangialardi",
+    "James Thompson",
+    "Cathy Siller",
+    "Nicko Winner-Arroyo"
   ],
   "license": "Apache-2.0",
   "bugs": {
@@ -27,17 +32,21 @@
     "scope": "@helix-design-system"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "3",
-    "@storybook/addon-knobs": "3",
-    "@storybook/addon-options": "3",
-    "@storybook/addon-viewport": "3",
-    "@storybook/addons": "3",
-    "@storybook/react": "3",
-    "babel-core": "6",
-    "babel-runtime": "6",
-    "helix-ui": "^0.12.0",
-    "prop-types": "15",
-    "react": "15",
-    "react-dom": "15"
-  }
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/runtime-corejs2": "^7.9.0",
+    "@storybook/addon-actions": "^5.3.17",
+    "@storybook/addon-knobs": "5.3.17",
+    "@storybook/addon-links": "^5.3.17",
+    "@storybook/addon-options": "5.3.17",
+    "@storybook/addon-viewport": "5.3.17",
+    "@storybook/addons": "^5.3.17",
+    "@storybook/react": "^5.3.17",
+    "babel-loader": "^8.1.0",
+    "helix-ui": "^0.19.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "dependencies": {}
 }
