@@ -9,7 +9,7 @@ const id = 'tooltipDemo';
 
 storiesOf('Tooltip', module)
 .addDecorator(centered)
-.add('Basic', () => {
+.add('All Knobs', () => {
   const [position, setPosition] = useState('top-left');
 
   const handleChange = ({ target: { value } }) => {
