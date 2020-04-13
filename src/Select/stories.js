@@ -1,4 +1,5 @@
 import centered from '@storybook/addon-centered/react';
+import { boolean, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
@@ -6,26 +7,21 @@ import Select from '../Select';
 
 storiesOf('Select', module)
 .addDecorator(centered)
-.add('Basic', () => {
+.add('All Knobs', () => {
+  let disabled = boolean('disabled', false);
+  let label = text('label', '');
+  let optional = boolean('optional', false);
+  let required = boolean('required', false);
+  
   return (
-    <Demo />
+    <Demo
+      { ...( disabled && { disabled }) }
+      { ...( label && { label }) }
+      { ...( optional && { optional }) }
+      { ...( required && { required }) }
+    />
   );
-})
-.add('Disabled', () => {
-  return (
-    <Demo disabled />
-  );
-})
-.add('Required', () => {
-  return (
-    <Demo required />
-  );
-})
-.add('Optional', () => {
-  return (
-    <Demo optional />
-  );
-})
+});
 
 const Demo = (props) => {
   return (
