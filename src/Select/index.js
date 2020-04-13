@@ -10,6 +10,7 @@ const Select = ({
   onChange,
   optional,
   required,
+  ...rest
 }) => {
   return (
     <hx-select-control>
@@ -18,11 +19,12 @@ const Select = ({
         disabled={disabled}
         onChange={onChange}
         required={required}
+        {...rest}
       >
         {children}
       </select>
       <hx-select></hx-select>
-      {!!label && (
+      {label && (
         <label
           className={classnames({
             hxOptional: optional,
