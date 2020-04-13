@@ -6,29 +6,29 @@ import React from 'react';
 import Select from '../Select';
 
 storiesOf('Select', module)
-.addDecorator(centered)
-.add('All Knobs', () => {
-  let disabled = boolean('disabled', false);
-  let label = text('label', '');
-  let optional = boolean('optional', false);
-  let required = boolean('required', false);
-  
-  return (
-    <Demo
-      { ...( disabled && { disabled }) }
-      { ...( label && { label }) }
-      { ...( optional && { optional }) }
-      { ...( required && { required }) }
-    />
-  );
-});
+  .addDecorator(centered)
+  .add('All Knobs', () => {
+    let disabled = boolean('disabled', false);
+    let label = text('label', '');
+    let optional = boolean('optional', false);
+    let required = boolean('required', false);
+
+    return (
+      <Demo
+        {...(disabled && { disabled })}
+        {...(label && { label })}
+        {...(optional && { optional })}
+        {...(required && { required })}
+      />
+    );
+  });
 
 const Demo = (props) => {
   return (
     <div style={{ padding: 25, width: 500 }}>
       <Select
         label="Select"
-        onChange={({ target: { value }}) => console.log(`changed to ${value}`)}
+        onChange={({ target: { value } }) => console.log(`changed to ${value}`)}
         {...props}
       >
         <Options />

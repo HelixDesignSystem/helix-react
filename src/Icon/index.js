@@ -5,24 +5,16 @@ import PropTypes from 'prop-types';
 export const Icons = Object.keys(HelixUI.Utils.ICONS);
 
 class Icon extends React.Component {
-    render () {
-        const {
-            type,
-            ...props
-        } = this.props;
+  render() {
+    const { type, ...props } = this.props;
 
-        return (
-            <hx-icon
-                type={type}
-                {...props}
-            ></hx-icon>
-        );
-    }
+    return <hx-icon type={type} {...props}></hx-icon>;
+  }
 }
 
 // additional configs here
 Icon.propTypes = {
-    type: PropTypes.string,
+  type: PropTypes.string,
 };
 
 export default Icon;

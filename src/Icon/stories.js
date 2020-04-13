@@ -5,8 +5,8 @@ import { select } from '@storybook/addon-knobs/react';
 import { storiesOf } from '@storybook/react';
 
 storiesOf('Icon', module)
-.addDecorator(centered)
-.add('All Knobs', () => {
+  .addDecorator(centered)
+  .add('All Knobs', () => {
     const type = select('type', Icons, 'bell');
-    return (<Icon type={type}/>);
-});
+    return <Icon type={type} />;
+  });
