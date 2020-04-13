@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import positions from './positions.js';
+
 const Tooltip = ({ children, id, position }) => {
   return (
     <hx-tooltip for={id} position={position}>
@@ -12,20 +14,7 @@ const Tooltip = ({ children, id, position }) => {
 Tooltip.propTypes = {
   children: PropTypes.node.isRequired,
   id: PropTypes.string.isRequired,
-  position: PropTypes.oneOf([
-    'top-left',
-    'top-center',
-    'top-right',
-    'right-top',
-    'right-middle',
-    'right-bottom',
-    'bottom-right',
-    'bottom-center',
-    'bottom-left',
-    'left-bottom',
-    'left-middle',
-    'left-top',
-  ]),
+  position: PropTypes.oneOf(positions),
 };
 
 Tooltip.defaultProps = {
