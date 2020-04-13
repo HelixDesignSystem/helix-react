@@ -36,6 +36,7 @@
     "@babel/preset-env": "^7.9.0",
     "@babel/runtime-corejs2": "^7.9.0",
     "@storybook/addon-actions": "^5.3.17",
+    "@storybook/addon-centered": "^5.3.18",
     "@storybook/addon-knobs": "5.3.17",
     "@storybook/addon-links": "^5.3.17",
     "@storybook/addon-options": "5.3.17",

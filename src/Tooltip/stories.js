@@ -1,3 +1,4 @@
+import centered from '@storybook/addon-centered/react';
 import { storiesOf } from '@storybook/react';
 import React, { useState } from 'react';
 
@@ -7,6 +8,7 @@ import Tooltip from '../Tooltip';
 const id = 'tooltipDemo';
 
 storiesOf('Tooltip', module)
+.addDecorator(centered)
 .add('Basic', () => {
   const [position, setPosition] = useState('top-left');
 
@@ -15,15 +17,7 @@ storiesOf('Tooltip', module)
   };
   
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '100vh',
-      }}
-    >
+    <div>
       <hx-icon id={id} type="help-circle" />
       <Tooltip id={id} position={position}>
         Some Message

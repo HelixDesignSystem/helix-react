@@ -1,6 +1,7 @@
 import Button from './';
 import { Icons } from '../Icon';
 import React from 'react';
+import centered from '@storybook/addon-centered/react';
 import { storiesOf } from '@storybook/react';
 import { boolean, select, text } from '@storybook/addon-knobs/react';
 
@@ -16,6 +17,7 @@ const VARIANTS = {
 };
 
 storiesOf('Button', module)
+.addDecorator(centered)
 .add('Sizes', () => {
     const size = select('size', SIZES, '');
     return (

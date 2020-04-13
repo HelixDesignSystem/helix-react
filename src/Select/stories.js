@@ -1,9 +1,11 @@
+import centered from '@storybook/addon-centered/react';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
 import Select from '../Select';
 
 storiesOf('Select', module)
+.addDecorator(centered)
 .add('Basic', () => {
   return (
     <Demo />
