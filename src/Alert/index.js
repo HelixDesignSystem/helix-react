@@ -28,7 +28,7 @@ const Alert = (props) => {
                 id={props.id}
                 ref={hxRef}
             >
-                {' '}{props.children}
+                {props.children}
             </hx-alert>
         </>
     );
@@ -36,10 +36,11 @@ const Alert = (props) => {
 
 Alert.propTypes = {
     className: PropTypes.string,
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
     type: PropTypes.string,
     status: PropTypes.string,
     cta: PropTypes.string,
+    persist: PropTypes.bool,
     onOpen: PropTypes.func,
     onClose: PropTypes.func
 };
