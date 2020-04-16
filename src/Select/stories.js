@@ -1,4 +1,5 @@
 import centered from '@storybook/addon-centered/react';
+import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
@@ -28,7 +29,7 @@ const Demo = (props) => {
     <div style={{ padding: 25, width: 500 }}>
       <Select
         label="Select"
-        onChange={({ target: { value } }) => console.log(`changed to ${value}`)}
+        onChange={action(`selected`)}
         {...props}
       >
         <Options />
