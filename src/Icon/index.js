@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export const Icons = Object.keys(HelixUI.Utils.ICONS);
 
 const Icon = ({ type, ...rest }) => {
-    return <hx-icon type={type} {...rest}></hx-icon>;
+  return <hx-icon type={type} {...rest}></hx-icon>;
 };
 
 Icon.propTypes = {
