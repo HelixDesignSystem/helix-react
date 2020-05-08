@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-const handlerNameToEvent = (handlerName) => handlerName.replace(/^on/,'').toLowerCase();
+const handlerNameToEvent = (handlerName) => handlerName.replace(/^on/, '').toLowerCase();
 
 /**
  * maps event handlers like onOpen or onClose to event listeners: 'open' or 'close'
@@ -9,23 +9,17 @@ const handlerNameToEvent = (handlerName) => handlerName.replace(/^on/,'').toLowe
  * @return {React.MutableRefObject}
  */
 function useEventListener(eventHandlers = {}, ref) {
-    const theRef = ref || useRef(null);
-    useEffect(() => {
-        Object.entries(eventHandlers).forEach(([handlerName, eventHandler] , key) => {
-            theRef.current.addEventListener(
-                handlerNameToEvent(handlerName),
-                eventHandler
-            );
-        });
-        return () => {
-            Object.entries(eventHandlers).forEach(([handlerName, eventHandler] , key) => {
-                theRef.current.addEventListener(
-                    handlerNameToEvent(handlerName),
-                    eventHandler
-                );
-            });
-        };
-    }, []);
-    return theRef;
+  const theRef = ref || useRef(null);
+  useEffect(() => {
+    Object.entries(eventHandlers).forEach(([handlerName, eventHandler], key) => {
+      theRef.current.addEventListener(handlerNameToEvent(handlerName), eventHandler);
+    });
+    return () => {
+      Object.entries(eventHandlers).forEach(([handlerName, eventHandler], key) => {
+        theRef.current.addEventListener(handlerNameToEvent(handlerName), eventHandler);
+      });
+    };
+  }, []);
+  return theRef;
 }
 export default useEventListener;
