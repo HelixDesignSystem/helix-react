@@ -6,10 +6,7 @@ const Alert = ({ onOpen, onClose, className, children, onDismiss, onSubmit, ...r
   const hxRef = useEventListener({ onDismiss, onSubmit });
   return (
     <>
-      {/*
-                 Wrappping element needed: Otherwise when alert removes itself from DOM on close it confusing React
-                 about where highest level parent element went, and will throw an error.
-             */}
+      {/* Wrappping element needed: Otherwise when alert removes itself from DOM on close, it will cause error */}
       <hx-alert class={className} ref={hxRef} {...rest}>
         {children}
       </hx-alert>

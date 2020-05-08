@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
 import useEventListener from '../hooks/useEventListener';
 import { SIZES } from '../constants';
 
