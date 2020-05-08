@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, select, text } from '@storybook/addon-knobs/react';
 import Alert from './index';
+import { action } from '@storybook/addon-actions';
 
 const TYPES = {
     'info': 'info',
@@ -24,6 +25,8 @@ storiesOf('Alert', module)
                 { ...( status && { status }) }
                 { ...( persist && { persist }) }
                 { ...( type && { type }) }
+                onDismiss={action('onDismiss')}
+                onSubmit={action('onSubmit')}
             >{content}</Alert>
         );
     });

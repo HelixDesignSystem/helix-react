@@ -1,18 +1,9 @@
-import React, { useRef, useEffect} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import useEventListener from '../hooks/useEventListener';
 
-const Alert = (props) => {
-    const hxRef = useRef(null);
-
-    useEffect(() => {
-        hxRef.current.addEventListener('open', props.onOpen);
-        hxRef.current.addEventListener('close', props.onClose);
-        return () => {
-            hxRef.current.removeEventListener('open', props.onOpen);
-            hxRef.current.removeEventListener('close', props.onClose);
-        };
-    }, []);
-
+const Alert = ({onOpen, onClose, className, children, onDismiss, onSubmit, ...rest }) => {
+    const hxRef = useEventListener({ onDismiss, onSubmit });
     return (
         <>
             {/*
@@ -20,15 +11,11 @@ const Alert = (props) => {
                  about where highest level parent element went, and will throw an error.
              */}
             <hx-alert
-                type={props.type}
-                status={props.status}
-                persist={props.persist}
-                cta={props.cta}
-                className={props.className}
-                id={props.id}
+                class={className}
                 ref={hxRef}
+                {...rest}
             >
-                {props.children}
+                {children}
             </hx-alert>
         </>
     );
@@ -41,8 +28,8 @@ Alert.propTypes = {
     status: PropTypes.string,
     cta: PropTypes.string,
     persist: PropTypes.bool,
-    onOpen: PropTypes.func,
-    onClose: PropTypes.func
+    onDismiss: PropTypes.func,
+    onSubmit: PropTypes.func
 };
 
 export default Alert;
