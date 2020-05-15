@@ -4,4 +4,4 @@
  * @param {boolean} bool
  * @return {*}
  */
-export const wcBool = (bool) => bool ? true : null;
+export const wcBool = (bool) => (bool ? true : null);
