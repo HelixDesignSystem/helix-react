@@ -32,11 +32,7 @@
 
 ## The problem
 
-You want to utilize the Helix UI webcomponents for your React application.
-As a part of this goal, you have to write and maintain React components
-that wrap the webcomponents with required boilerplate. You might want to
-use a tool like [Storybook](https://storybook.js.org/) to see what these
-wrappers look like.
+You ❤️[Helix UI webcomponents library](https://helixdesignsystem.github.io/helix-ui/) and want to use it in your React application. You then realized React support for webcomponents is [underwelming](https://custom-elements-everywhere.com/) and requires you to write React compatibility wrappers for each web component that uses events. 
 
 ## This solution
 
