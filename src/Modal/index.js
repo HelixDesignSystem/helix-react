@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import useEventListener from '../hooks/useEventListener';
 import { SIZES } from '../constants';
+import { wcBool } from '../utils';
 
 const Modal = ({ onOpen, onClose, className, open, size, children, ...rest }) => {
   const hxRef = useEventListener({ onOpen, onClose });
@@ -10,7 +11,7 @@ const Modal = ({ onOpen, onClose, className, open, size, children, ...rest }) =>
     <hx-modal
       class={classNames(className, SIZES[size])}
       ref={hxRef}
-      open={open ? true : null}
+      open={wcBool(open)}
       {...rest}
     >
       {children}

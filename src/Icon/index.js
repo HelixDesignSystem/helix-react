@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 
 export const Icons = Object.keys(HelixUI.Utils.ICONS);
 
-const Icon = ({ type, ...rest }) => {
-  return <hx-icon type={type} {...rest}></hx-icon>;
+const Icon = ({ type, className, ...rest }) => {
+  return <hx-icon type={type} {...rest} class={className}></hx-icon>;
 };
 
 Icon.propTypes = {
   type: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Icon;
