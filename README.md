@@ -3,7 +3,7 @@
 <div align="center">
   <h1>Helix React</h1>
 
-  <p align="left">
+  <p align="center">
     <img src="https://user-images.githubusercontent.com/22566333/82078061-7e8f0700-96ae-11ea-98f5-94be80c8d060.png">
   </p>
 
