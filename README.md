@@ -23,6 +23,7 @@
   - [Helix UI Webcomponent Snippet From Documentation](#helix-ui-webcomponent-snippet-from-documentation)
   - [Our Implementation](#our-implementation)
 - [Guiding Principles](#guiding-principles)
+- [Storybook](#-storybook)
 - [Issues](#issues)
   - [🐛 Bugs](#-bugs)
   - [💡 Feature Requests](#-feature-requests)
@@ -129,6 +130,33 @@ the [Helix design documentation](http://helix.rax.io/status.html).
 
 Our aim is expose these building blocks and not put them together for more
 complex Helix patterns (i.e. a submit button with a loader).
+
+## 📚 Storybook
+[Storybook](https://storybook.js.org/) is an open source tool for developing UI components
+in isolation for React, Vue, and Angular.
+You can use this as a playground for all our components.
+
+1. Install Yarn
+
+```bash
+npm i -g yarn
+```
+
+2. Install Dependencies
+
+```bash
+yarn install
+```
+
+3. Run Storybook
+
+```bash
+npm start
+```
+The script should automatically open Storybook in your browser, but you can always navigate to http:http://localhost:6006/?path=/story
+
+4. Play Around
+<img width="639" alt="Screen Shot 2020-05-15 at 2 32 35 PM" src="https://user-images.githubusercontent.com/22566333/82084224-f5c99880-96b8-11ea-92e2-403b3f4378db.png">
 
 ## Issues
 
