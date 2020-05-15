@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import positions from './positions.js';
+import { POSITIONS } from '../constants';
 
 const Tooltip = ({ children, id, position }) => {
   return (
@@ -14,7 +13,7 @@ const Tooltip = ({ children, id, position }) => {
 Tooltip.propTypes = {
   children: PropTypes.node.isRequired,
   id: PropTypes.string.isRequired,
-  position: PropTypes.oneOf(positions),
+  position: PropTypes.oneOf(POSITIONS),
 };
 
 Tooltip.defaultProps = {

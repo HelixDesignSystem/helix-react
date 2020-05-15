@@ -1,4 +1,10 @@
-const positions = [
+export const SIZES = {
+  small: 'hxSm',
+  medium: 'hxMd',
+  large: 'hxLg',
+};
+
+export const POSITIONS = [
   'top-left',
   'top-center',
   'top-right',
@@ -12,5 +18,3 @@ const positions = [
   'left-middle',
   'left-top',
 ];
-
-export default positions;

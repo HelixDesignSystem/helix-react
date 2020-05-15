@@ -27,11 +27,7 @@ storiesOf('Select', module)
 const Demo = (props) => {
   return (
     <div style={{ padding: 25, width: 500 }}>
-      <Select
-        label="Select"
-        onChange={action(`selected`)}
-        {...props}
-      >
+      <Select label="Select" onChange={action(`selected`)} {...props}>
         <Options />
       </Select>
     </div>
