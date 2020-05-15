@@ -1,16 +1,23 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { boolean, text } from '@storybook/addon-knobs/react';
+import { boolean, select, text } from '@storybook/addon-knobs/react';
 
 import Drawer from './index';
 import Button from '../Button';
 import HxDiv from '../HxDiv';
+
+const SIZES = {
+  small: 'small',
+  medium: 'medium',
+  large: 'large',
+};
 
 storiesOf('Drawer', module).add('All Knobs', () => {
   let header = text('header', '');
   let body = text('body', '');
   let footer = text('footer', '');
   let open = boolean('open', true);
+  let size = select('size', SIZES, 'medium');
 
   const loremIpsum = (
     <p>
@@ -37,7 +44,7 @@ storiesOf('Drawer', module).add('All Knobs', () => {
   );
 
   return (
-    <Drawer {...(open && { open })}>
+    <Drawer {...(open && { open })} {...(size && { size })}>
       {<header>{header || defaultHeader}</header>}
       {<HxDiv>{body || defaultBody}</HxDiv>}
       {<footer>{footer || defaultFooter}</footer>}
