@@ -108,12 +108,6 @@ Each wrapper corresponds with a component listed on the [Helix UI documentation]
 
 ![helix-ui-documentation](https://user-images.githubusercontent.com/22566333/82083617-07f70700-96b8-11ea-9581-da1796737e52.png)
 
-These components are just the "building blocks" of other Helix patterns listed in
-the [Helix design documentation](http://helix.rax.io/status.html).
-
-Our aim is expose these building blocks and not put them together for more
-complex Helix patterns (i.e. a submit button with a loader).
-
 ## 📚 Storybook
 [Storybook](https://storybook.js.org/) is an open source tool for developing UI components
 in isolation for React, Vue, and Angular.
@@ -130,7 +124,7 @@ yarn install
 ```bash
 npm start
 ```
-The script should automatically open Storybook in your browser, but you can always navigate to http:http://localhost:6006/?path=/story
+The script should automatically open Storybook in your browser, but you can always navigate to `http://localhost:6006/?path=/story`
 
 3. Play Around
 <img width="639" alt="Screen Shot 2020-05-15 at 2 32 35 PM" src="https://user-images.githubusercontent.com/22566333/82084224-f5c99880-96b8-11ea-92e2-403b3f4378db.png">
@@ -155,10 +149,7 @@ a 👍. This helps maintainers prioritize what to work on.
 
 ### ❓ Questions
 
-For questions related to using the library, please visit a support community
-instead of filing an issue on GitHub.
-
-[Slack](https://join.slack.com/share/zt-edajgkat-LG_5SXYoCeIzknrQPVWaTA)
+For questions related to using the library, please file an issue on GitHub.
 
 ## Contributors
 
@@ -166,8 +157,8 @@ Thanks goes to these people:
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/michaelmang"><img src="https://avatars0.githubusercontent.com/u/10120600?s=400&u=7a37b1eba79b6ee2c7753a457b8a33998595fe20&v=4" width="100px;" alt=""/><br /><sub><b>James Thompson</b></sub></a><br /><a href="https://github.com/HelixDesignSystem/helix-react/commits?author=100Stacks" title="Commits">💻</a></td>
-    <td align="center"><a href="https://github.com/michaelmang"><img src="https://avatars0.githubusercontent.com/u/35456401?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Nicko Winner-Arroyo</b></sub></a><br /><a href="https://github.com/HelixDesignSystem/helix-react/commits?author=nicko-winner" title="Commits">💻</a></td>
+    <td align="center"><a href="https://github.com/100stacks"><img src="https://avatars0.githubusercontent.com/u/10120600?s=400&u=7a37b1eba79b6ee2c7753a457b8a33998595fe20&v=4" width="100px;" alt=""/><br /><sub><b>James Thompson</b></sub></a><br /><a href="https://github.com/HelixDesignSystem/helix-react/commits?author=100Stacks" title="Commits">💻</a></td>
+    <td align="center"><a href="https://github.com/nicko-winner"><img src="https://avatars0.githubusercontent.com/u/35456401?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Nicko Winner-Arroyo</b></sub></a><br /><a href="https://github.com/HelixDesignSystem/helix-react/commits?author=nicko-winner" title="Commits">💻</a></td>
     <td align="center"><a href="https://github.com/michaelmang"><img src="https://avatars1.githubusercontent.com/u/22566333?s=400&u=4bf26df70a7aaf408bd5e8d187c7066f2950adca&v=4" width="100px;" alt=""/><br /><sub><b>Mike Mangialardi</b></sub></a><br /><a href="https://github.com/HelixDesignSystem/helix-react/commits/master?author=mike.mangialardi@rackspace.com" title="Commits">💻</a></td>
   </tr>
 </table>
