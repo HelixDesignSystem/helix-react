@@ -23,8 +23,8 @@ const ChoiceTile = ({
     <label className={classNames({ hxChoice: true, className })}>
       <input
         checked={wcBool(checked)}
-        disabled={wcBool(disabled)}
-        invalid={wcBool(invalid)?.toString()}
+        disabled={disabled}
+        invalid={invalid?.toString()}
         name={id}
         type="radio"
       />
