@@ -11,8 +11,8 @@ const ChoiceTile = ({
   className,
   disabled,
   icon,
-  id,
   invalid,
+  name,
   onChange,
   size,
   subdued,
@@ -25,7 +25,7 @@ const ChoiceTile = ({
         checked={wcBool(checked)}
         disabled={disabled}
         invalid={invalid?.toString()}
-        name={id}
+        name={name}
         type="radio"
       />
       <hx-tile class={classNames({ hxSubdued: subdued, [SIZES[size]]: true })} {...rest}>
@@ -48,8 +48,8 @@ ChoiceTile.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   icon: PropTypes.string,
-  id: PropTypes.string.isRequired,
   invalid: PropTypes.bool,
+  name: PropTypes.string.isRequired,
   size: PropTypes.oneOf(SIZES),
   subdued: PropTypes.bool,
   title: PropTypes.string.isRequired,

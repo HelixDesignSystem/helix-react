@@ -43,7 +43,7 @@ storiesOf('Choice Tile', module).add('All Knobs', () => {
         {...(subdued && { subdued })}
         {...(size && { size })}
         icon={icon}
-        id="choiceTileDemo"
+        name="choiceTileDemo"
         style={{ width: 200 }}
         title={title || defaultTitle}
       >
@@ -52,7 +52,7 @@ storiesOf('Choice Tile', module).add('All Knobs', () => {
 
       <ChoiceTile
         icon="bell"
-        id="choiceTileDemo"
+        name="choiceTileDemo"
         style={{ marginLeft: 25, width: 200 }}
         title="Other Choice"
       >
