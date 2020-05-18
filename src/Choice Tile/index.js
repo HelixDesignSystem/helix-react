@@ -28,10 +28,7 @@ const ChoiceTile = ({
         name={id}
         type="radio"
       />
-      <hx-tile
-        class={classNames({ hxSubdued: subdued, [SIZES[size]]: true })}
-        {...rest}
-      >
+      <hx-tile class={classNames({ hxSubdued: subdued, [SIZES[size]]: true })} {...rest}>
         <hx-icon type="checkmark"></hx-icon>
         {icon && (
           <div className="hx-tile-icon">
