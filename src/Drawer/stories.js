@@ -1,10 +1,11 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs/react';
-import Modal from './index';
-import HxDiv from '../HxDiv';
+import { storiesOf } from '@storybook/react';
+
+import Drawer from './index';
 import Button from '../Button';
+import HxDiv from '../HxDiv';
 import { getLongText } from '../storyUtils';
 
 const SIZES = {
@@ -13,41 +14,32 @@ const SIZES = {
   large: 'large',
 };
 
-storiesOf('Modal', module).add('All Knobs', () => {
-  let header = text('header in H3', 'Modal Header');
+storiesOf('Drawer', module).add('All Knobs', () => {
+  let header = text('header', '');
+  let body = text('body', '');
   let footer = text('footer', '');
   let open = boolean('open', true);
   let size = select('size', SIZES, 'medium');
-  let scroll = boolean('scroll', false);
 
-  const smallText =
-    'This is the body of a demo modal. Interaction with content behind this modal cannot take place until this modal is closed.\n';
-  const longText = [1, 2, 3, 4, 5].map(() => <p>{getLongText()}</p>);
+  const defaultBody = <p>{getLongText()}</p>;
+  const defaultHeader = 'Drawer Header';
   const defaultFooter = (
-    <>
+    <div class="hxButtonSet">
       <Button variant="primary">Confirm</Button>
       <Button variant="tertiary">Cancel</Button>
-    </>
+    </div>
   );
 
   return (
-    <Modal
+    <Drawer
       {...(open && { open })}
       {...(size && { size })}
-      open={open}
       onOpen={action('onOpen')}
       onClose={action('onClose')}
     >
-      {header && (
-        <header>
-          <h3>{header}</h3>
-        </header>
-      )}
-      <HxDiv scroll={scroll && 'vertical'}>
-        {smallText}
-        {scroll ? longText : null}
-      </HxDiv>
+      {<header>{header || defaultHeader}</header>}
+      {<HxDiv className="hxMd">{body || defaultBody}</HxDiv>}
       {<footer>{footer || defaultFooter}</footer>}
-    </Modal>
+    </Drawer>
   );
 });

@@ -8,12 +8,7 @@ import { wcBool } from '../utils';
 const Modal = ({ onOpen, onClose, className, open, size, children, ...rest }) => {
   const hxRef = useEventListener({ onOpen, onClose });
   return (
-    <hx-modal
-      class={classNames(className, SIZES[size])}
-      ref={hxRef}
-      open={wcBool(open)}
-      {...rest}
-    >
+    <hx-modal class={classNames(className, SIZES[size])} ref={hxRef} open={wcBool(open)} {...rest}>
       {children}
     </hx-modal>
   );
