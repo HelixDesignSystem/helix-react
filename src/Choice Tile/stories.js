@@ -1,4 +1,5 @@
 import React from 'react';
+import { action } from '@storybook/addon-actions';
 import { optionsKnob as options } from '@storybook/addon-knobs';
 import { boolean, select, text } from '@storybook/addon-knobs/react';
 import { storiesOf } from '@storybook/react';
@@ -44,6 +45,7 @@ storiesOf('Choice Tile', module).add('All Knobs', () => {
         {...(size && { size })}
         icon={icon}
         name="choiceTileDemo"
+        onChange={action('onChange')}
         style={{ width: 200 }}
         title={title || defaultTitle}
       >
