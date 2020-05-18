@@ -1,3 +1,5 @@
+export const getShortText = () => `lorem ipsum dolor sir amet`;
+
 export const getLongText = () => `
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
   labore et dolore magna aliqua. Gravida rutrum quisque non tellus. Sagittis vitae et leo duis
