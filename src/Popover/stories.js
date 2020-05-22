@@ -1,53 +1,55 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import centered from '@storybook/addon-centered/react';
 import { boolean, select, text } from '@storybook/addon-knobs/react';
-import Modal from './index';
+import Popover from '.';
 import Div from '../Div';
 import Button from '../Button';
 import { getLongText } from '../storyUtils';
+import { POSITIONS } from '../constants';
+import Disclosure from '../Disclosure';
 
-const SIZES = {
-  small: 'small',
-  medium: 'medium',
-  large: 'large',
-};
-
-storiesOf('Modal', module).add('All Knobs', () => {
-  let header = text('header in H3', 'Modal Header');
+storiesOf('Popover', module)
+  .addDecorator(centered)
+  .add('All Knobs', () => {
+  let header = text('header', 'Popover Header');
   let footer = text('footer', '');
-  let open = boolean('open', true);
-  let size = select('size', SIZES, 'medium');
+  let position = select('positions', POSITIONS);
   let scroll = boolean('scroll', false);
 
-  const smallText =
-    'This is the body of a demo modal. Interaction with content behind this modal cannot take place until this modal is closed.\n';
+  const smallText = 'This is the body of a demo popover\n';
   const longText = [1, 2, 3, 4, 5].map(() => <p>{getLongText()}</p>);
   const defaultFooter = (
     <>
-      <Button variant="primary">Confirm</Button>
+      <Button variant="primary">Ok</Button>
       <Button variant="tertiary">Cancel</Button>
     </>
   );
 
   return (
-    <Modal
-      {...(open && { open })}
-      {...(size && { size })}
-      open={open}
-      onOpen={action('onOpen')}
-      onClose={action('onClose')}
-    >
-      {header && (
-        <header>
-          <h3>{header}</h3>
-        </header>
-      )}
-      <Div scroll={scroll && 'vertical'}>
-        {smallText}
-        {scroll ? longText : null}
-      </Div>
-      {<footer>{footer || defaultFooter}</footer>}
-    </Modal>
+    <>
+      <Disclosure ariaControls="demoPopover">
+        <Button>Open Popover</Button>
+      </Disclosure>
+      <Popover
+        id="demoPopover"
+        {...(position && { position })}
+        onOpen={action('onOpen')}
+        onClose={action('onClose')}
+        onPosition={action('onReposition')}
+      >
+        {header && (
+          <header>
+            {header}
+          </header>
+        )}
+        <Div scroll={scroll && 'vertical'}>
+          {smallText}
+          {scroll ? longText : null}
+        </Div>
+        {<footer>{footer || defaultFooter}</footer>}
+      </Popover>
+    </>
   );
 });
