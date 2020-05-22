@@ -13,43 +13,39 @@ import Disclosure from '../Disclosure';
 storiesOf('Popover', module)
   .addDecorator(centered)
   .add('All Knobs', () => {
-  let header = text('header', 'Popover Header');
-  let footer = text('footer', '');
-  let position = select('positions', POSITIONS);
-  let scroll = boolean('scroll', false);
+    let header = text('header', 'Popover Header');
+    let footer = text('footer', '');
+    let position = select('positions', POSITIONS);
+    let scroll = boolean('scroll', false);
 
-  const smallText = 'This is the body of a demo popover\n';
-  const longText = [1, 2, 3, 4, 5].map(() => <p>{getLongText()}</p>);
-  const defaultFooter = (
-    <>
-      <Button variant="primary">Ok</Button>
-      <Button variant="tertiary">Cancel</Button>
-    </>
-  );
+    const smallText = 'This is the body of a demo popover\n';
+    const longText = [1, 2, 3, 4, 5].map(() => <p>{getLongText()}</p>);
+    const defaultFooter = (
+      <>
+        <Button variant="primary">Ok</Button>
+        <Button variant="tertiary">Cancel</Button>
+      </>
+    );
 
-  return (
-    <>
-      <Disclosure ariaControls="demoPopover">
-        <Button>Open Popover</Button>
-      </Disclosure>
-      <Popover
-        id="demoPopover"
-        {...(position && { position })}
-        onOpen={action('onOpen')}
-        onClose={action('onClose')}
-        onPosition={action('onReposition')}
-      >
-        {header && (
-          <header>
-            {header}
-          </header>
-        )}
-        <Div scroll={scroll && 'vertical'}>
-          {smallText}
-          {scroll ? longText : null}
-        </Div>
-        {<footer>{footer || defaultFooter}</footer>}
-      </Popover>
-    </>
-  );
-});
+    return (
+      <>
+        <Disclosure ariaControls="demoPopover">
+          <Button>Open Popover</Button>
+        </Disclosure>
+        <Popover
+          id="demoPopover"
+          {...(position && { position })}
+          onOpen={action('onOpen')}
+          onClose={action('onClose')}
+          onPosition={action('onReposition')}
+        >
+          {header && <header>{header}</header>}
+          <Div scroll={scroll && 'vertical'}>
+            {smallText}
+            {scroll ? longText : null}
+          </Div>
+          {<footer>{footer || defaultFooter}</footer>}
+        </Popover>
+      </>
+    );
+  });

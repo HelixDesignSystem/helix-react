@@ -2,12 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Disclosure = ({ className, ariaControls, ariaExpanded, ...rest }) => {
-  return <hx-disclosure
+  return (
+    <hx-disclosure
       class={className}
       aria-controls={ariaControls}
       aria-expanded={ariaExpanded}
       {...rest}
-  />;
+    />
+  );
 };
 
 Disclosure.propTypes = {

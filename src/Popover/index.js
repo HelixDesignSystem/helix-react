@@ -6,14 +6,9 @@ import { POSITIONS } from '../constants';
 import { wcBool } from '../utils';
 
 const Popover = ({ onOpen, onClose, onReposition, className, open, children, ...rest }) => {
-  const hxRef = useEventListener({ onOpen, onClose, onReposition});
+  const hxRef = useEventListener({ onOpen, onClose, onReposition });
   return (
-    <hx-popover
-      class={classNames(className)}
-      ref={hxRef}
-      open={wcBool(open)}
-      {...rest}
-    >
+    <hx-popover class={classNames(className)} ref={hxRef} open={wcBool(open)} {...rest}>
       {children}
     </hx-popover>
   );
