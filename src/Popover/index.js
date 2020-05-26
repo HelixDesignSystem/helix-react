@@ -5,10 +5,25 @@ import useEventListener from '../hooks/useEventListener';
 import { POSITIONS } from '../constants';
 import { wcBool } from '../utils';
 
-const Popover = ({ onOpen, onClose, onReposition, className, open, children, relativeTo, ...rest }) => {
+const Popover = ({
+  onOpen,
+  onClose,
+  onReposition,
+  className,
+  open,
+  children,
+  relativeTo,
+  ...rest
+}) => {
   const hxRef = useEventListener({ onOpen, onClose, onReposition });
   return (
-    <hx-popover class={classNames(className)} ref={hxRef} open={wcBool(open)} relative-to={relativeTo} {...rest}>
+    <hx-popover
+      class={classNames(className)}
+      ref={hxRef}
+      open={wcBool(open)}
+      relative-to={relativeTo}
+      {...rest}
+    >
       {children}
     </hx-popover>
   );
