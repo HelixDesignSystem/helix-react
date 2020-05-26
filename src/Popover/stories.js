@@ -15,7 +15,7 @@ storiesOf('Popover', module)
   .add('All Knobs', () => {
     let header = text('header', 'Popover Header');
     let footer = text('footer', '');
-    let position = select('positions', POSITIONS);
+    let position = select('positions', POSITIONS, 'bottom-right');
     let scroll = boolean('scroll', false);
 
     const smallText = 'This is the body of a demo popover\n';
