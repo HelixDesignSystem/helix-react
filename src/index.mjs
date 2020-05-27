@@ -3,8 +3,9 @@ import Button from './Button';
 import Alert from './Alert';
 import Drawer from './Drawer';
 import Icon from './Icon';
-import Tooltip from './Tooltip';
 import Modal from './Modal';
+import Popover from './Popover';
+import Tooltip from './Tooltip';
 import Select from './Select';
 
 export default {
@@ -13,6 +14,7 @@ export default {
   Drawer,
   Icon,
   Modal,
+  Popover,
   Select,
-  Tooltip
+  Tooltip,
 };

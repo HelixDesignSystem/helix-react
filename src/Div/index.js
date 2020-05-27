@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const HxDiv = ({ className, ...rest }) => {
+const Div = ({ className, ...rest }) => {
   return <hx-div class={className} {...rest} />;
 };
 
-HxDiv.propTypes = {
+Div.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   scroll: PropTypes.oneOf(['vertical', 'horizontal', 'both', 'none']),
 };
 
-export default HxDiv;
+export default Div;

@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 
 import Drawer from './index';
 import Button from '../Button';
-import HxDiv from '../HxDiv';
+import Div from '../Div';
 import { getLongText } from '../storyUtils';
 
 const SIZES = {
@@ -38,7 +38,7 @@ storiesOf('Drawer', module).add('All Knobs', () => {
       onClose={action('onClose')}
     >
       {<header>{header || defaultHeader}</header>}
-      {<HxDiv className="hxMd">{body || defaultBody}</HxDiv>}
+      {<Div className="hxMd">{body || defaultBody}</Div>}
       {<footer>{footer || defaultFooter}</footer>}
     </Drawer>
   );

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs/react';
 import Modal from './index';
-import HxDiv from '../HxDiv';
+import Div from '../Div';
 import Button from '../Button';
 import { getLongText } from '../storyUtils';
 
@@ -43,10 +43,10 @@ storiesOf('Modal', module).add('All Knobs', () => {
           <h3>{header}</h3>
         </header>
       )}
-      <HxDiv scroll={scroll && 'vertical'}>
+      <Div scroll={scroll && 'vertical'}>
         {smallText}
         {scroll ? longText : null}
-      </HxDiv>
+      </Div>
       {<footer>{footer || defaultFooter}</footer>}
     </Modal>
   );
