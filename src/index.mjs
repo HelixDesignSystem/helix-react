@@ -7,6 +7,8 @@ import Modal from './Modal';
 import Popover from './Popover';
 import Tooltip from './Tooltip';
 import Select from './Select';
+import Search from './Search';
+import SearchAssist from './Search/SearchAssist';
 
 export default {
   Button,
@@ -17,4 +19,6 @@ export default {
   Popover,
   Select,
   Tooltip,
+  Search,
+  SearchAssist
 };
