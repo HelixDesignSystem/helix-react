@@ -1,11 +1,12 @@
 import centered from '@storybook/addon-centered/react';
 import { action } from '@storybook/addon-actions';
-import { boolean, text } from '@storybook/addon-knobs';
+import { boolean, text, select } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import React, { useState } from 'react';
 import Search from '../Search';
 import SearchAssist from './SearchAssist';
 import { InputContainer } from '../storyUtils';
+import { POSITIONS } from '../constants';
 
 storiesOf('Search', module)
   .addDecorator(centered)
@@ -14,6 +15,7 @@ storiesOf('Search', module)
     let label = text('label', '');
     let optional = boolean('optional', false);
     let required = boolean('required', false);
+    let position = select('positions', POSITIONS, 'bottom-center');
 
     return (
       <InputContainer>
@@ -23,6 +25,7 @@ storiesOf('Search', module)
           {...(label && { label })}
           {...(optional && { optional })}
           {...(required && { required })}
+          {...(position && { position })}
           onChange={action('change')}
         />
       </InputContainer>
@@ -33,6 +36,7 @@ storiesOf('Search', module)
     let label = text('label', 'Search');
     let optional = boolean('optional', false);
     let required = boolean('required', false);
+    let position = select('positions', POSITIONS, 'bottom-center');
     const [value, setValue] = useState('');
 
     return (
@@ -47,6 +51,7 @@ storiesOf('Search', module)
           {...(label && { label })}
           {...(optional && { optional })}
           {...(required && { required })}
+          {...(position && { position })}
         >
           <header>Search for "{value}"</header>
           <section>

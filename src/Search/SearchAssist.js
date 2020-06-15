@@ -8,7 +8,7 @@ import { POSITIONS } from '../constants';
 /**
  * @see https://helixdesignsystem.github.io/helix-ui/components/search/
  */
-const SearchAssist = ({ children, onFocus, onBlur, ...rest }) => {
+const SearchAssist = ({ children, onFocus, onBlur, position, ...rest }) => {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -24,7 +24,11 @@ const SearchAssist = ({ children, onFocus, onBlur, ...rest }) => {
         }}
         wrapperId={`${rest.id}-hx-search-control`}
       />
-      <SearchAssistance relativeTo={`${rest.id}-hx-search-control`} open={wcBool(open)}>
+      <SearchAssistance
+        relativeTo={`${rest.id}-hx-search-control`}
+        open={wcBool(open)}
+        position={position}
+      >
         {children}
       </SearchAssistance>
     </>
@@ -33,9 +37,7 @@ const SearchAssist = ({ children, onFocus, onBlur, ...rest }) => {
 
 SearchAssist.propTypes = {
   children: PropTypes.node.isRequired,
-  relativeTo: PropTypes.string.isRequired,
   position: PropTypes.oneOf(POSITIONS),
-  optimumPosition: PropTypes.string,
 };
 
 export default SearchAssist;
