@@ -7,11 +7,23 @@ import { wcBool } from '../utils';
 /**
  * @see https://helixdesignsystem.github.io/helix-ui/components/search/
  */
-const Search = ({ children, disabled, id, label, className, clearLabel, onClear, optional, required, wrapperId, ...rest }) => {
+const Search = ({
+  children,
+  disabled,
+  id,
+  label,
+  className,
+  clearLabel,
+  onClear,
+  optional,
+  required,
+  wrapperId,
+  ...rest
+}) => {
   return (
     <hx-search-control class={className} id={wrapperId}>
       <input id={id} {...rest} disabled={wcBool(disabled)} type="search" />
-      <button type="button" className="hxClear" aria-label={clearLabel} hidden onClick={onClear} >
+      <button type="button" className="hxClear" aria-label={clearLabel} hidden onClick={onClear}>
         <Icon type="times" />
       </button>
       <hx-search></hx-search>
@@ -45,7 +57,7 @@ Search.propTypes = {
 };
 
 Search.defaultProps = {
-  clearLabel: 'Clear search'
+  clearLabel: 'Clear search',
 };
 
 export default Search;

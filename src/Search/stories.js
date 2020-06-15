@@ -27,35 +27,41 @@ storiesOf('Search', module)
         />
       </InputContainer>
     );
-  }).add('SearchAssist', () => {
-  let disabled = boolean('disabled', false);
-  let label = text('label', 'Search');
-  let optional = boolean('optional', false);
-  let required = boolean('required', false);
-  const [value, setValue] = useState('');
+  })
+  .add('SearchAssist', () => {
+    let disabled = boolean('disabled', false);
+    let label = text('label', 'Search');
+    let optional = boolean('optional', false);
+    let required = boolean('required', false);
+    const [value, setValue] = useState('');
 
-  return (
-    <InputContainer>
-      <SearchAssist
-        id="my-assisted-search"
-        onChange={(e) => setValue(e.target.value)}
-        onClear={e => action('onClear')}
-        onFocus={e => action('onFocus')}
-        onBlur={e => action('onBlur')}
-        {...(disabled && { disabled })}
-        {...(label && { label })}
-        {...(optional && { optional })}
-        {...(required && { required })}
-      >
-        <header>Search for "{value}"</header>
-        <section>
-          <header>Category Header</header>
-          <button className="hxSearchSuggestion">Here is a possible <b>{value}</b></button>
-          <button className="hxSearchSuggestion">Here is a possible <b>{value}</b></button>
-          <button className="hxSearchSuggestion">Here is a possible <b>{value}</b></button>
-        </section>
-      </SearchAssist>
-    </InputContainer>
-  );
-});
-
+    return (
+      <InputContainer>
+        <SearchAssist
+          id="my-assisted-search"
+          onChange={(e) => setValue(e.target.value)}
+          onClear={(e) => action('onClear')}
+          onFocus={(e) => action('onFocus')}
+          onBlur={(e) => action('onBlur')}
+          {...(disabled && { disabled })}
+          {...(label && { label })}
+          {...(optional && { optional })}
+          {...(required && { required })}
+        >
+          <header>Search for "{value}"</header>
+          <section>
+            <header>Category Header</header>
+            <button className="hxSearchSuggestion">
+              Here is a possible <b>{value}</b>
+            </button>
+            <button className="hxSearchSuggestion">
+              Here is a possible <b>{value}</b>
+            </button>
+            <button className="hxSearchSuggestion">
+              Here is a possible <b>{value}</b>
+            </button>
+          </section>
+        </SearchAssist>
+      </InputContainer>
+    );
+  });

@@ -16,11 +16,11 @@ const SearchAssist = ({ children, onFocus, onBlur, ...rest }) => {
         {...rest}
         onFocus={(e) => {
           setOpen(true);
-          onFocus && onFocus(e)
+          onFocus && onFocus(e);
         }}
         onBlur={(e) => {
           setOpen(false);
-          onBlur && onBlur(e)
+          onBlur && onBlur(e);
         }}
         wrapperId={`${rest.id}-hx-search-control`}
       />

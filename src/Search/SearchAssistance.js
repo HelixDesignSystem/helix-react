@@ -17,5 +17,4 @@ SearchAssistance.propTypes = {
   relativeTo: PropTypes.string.isRequired,
 };
 
-
 export default SearchAssistance;
