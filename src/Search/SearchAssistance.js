@@ -7,11 +7,7 @@ import { POSITIONS } from '../constants';
  */
 const SearchAssistance = ({ children, className, relativeTo, ...rest }) => {
   return (
-    <hx-search-assistance
-      class={className}
-      relative-to={relativeTo}
-      {...rest}
-    >
+    <hx-search-assistance class={className} relative-to={relativeTo} {...rest}>
       {children}
     </hx-search-assistance>
   );

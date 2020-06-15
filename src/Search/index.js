@@ -44,6 +44,7 @@ const Search = ({
 
 Search.propTypes = {
   className: PropTypes.string,
+  clearLabel: PropTypes.string,
   label: PropTypes.string,
   id: PropTypes.string.isRequired,
   wrapperId: PropTypes.string,
