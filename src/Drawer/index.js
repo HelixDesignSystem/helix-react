@@ -20,7 +20,7 @@ Drawer.propTypes = {
   onClose: PropTypes.func,
   onOpen: PropTypes.func,
   open: PropTypes.bool,
-  size: PropTypes.oneOf(SIZES),
+  size: PropTypes.oneOf(Object.keys(SIZES)),
 };
 
 Drawer.defaultProps = {

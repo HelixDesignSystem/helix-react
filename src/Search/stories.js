@@ -1,4 +1,3 @@
-import centered from '@storybook/addon-centered/react';
 import { action } from '@storybook/addon-actions';
 import { boolean, text, select } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
@@ -9,7 +8,6 @@ import { InputContainer } from '../storyUtils';
 import { POSITIONS } from '../constants';
 
 storiesOf('Search', module)
-  .addDecorator(centered)
   .add('All Knobs', () => {
     let disabled = boolean('disabled', false);
     let label = text('label', '');
@@ -44,7 +42,11 @@ storiesOf('Search', module)
         <SearchAssist
           id="my-assisted-search"
           onChange={(e) => setValue(e.target.value)}
-          onClear={(e) => action('onClear')}
+          value={value}
+          onClear={(e) => {
+            action('onClear');
+            setValue('');
+          }}
           onFocus={(e) => action('onFocus')}
           onBlur={(e) => action('onBlur')}
           {...(disabled && { disabled })}
@@ -56,15 +58,15 @@ storiesOf('Search', module)
           <header>Search for "{value}"</header>
           <section>
             <header>Category Header</header>
-            <button className="hxSearchSuggestion">
-              Here is a possible <b>{value}</b>
-            </button>
-            <button className="hxSearchSuggestion">
-              Here is a possible <b>{value}</b>
-            </button>
-            <button className="hxSearchSuggestion">
-              Here is a possible <b>{value}</b>
-            </button>
+            {POSITIONS.filter(p => p.search(value) !== -1).map(item => (
+              <button
+                className="hxSearchSuggestion"
+                key={item}
+                onClick={() => setValue(item)}
+              >
+                Here is a possible match: {item}
+              </button>
+            ))}
           </section>
         </SearchAssist>
       </InputContainer>

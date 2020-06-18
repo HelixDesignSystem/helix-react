@@ -52,7 +52,7 @@ ChoiceTile.propTypes = {
   invalid: PropTypes.bool,
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func,
-  size: PropTypes.oneOf(SIZES),
+  size: PropTypes.oneOf(Object.keys(SIZES)),
   subdued: PropTypes.bool,
   title: PropTypes.string.isRequired,
 };
