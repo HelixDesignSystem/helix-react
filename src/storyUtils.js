@@ -17,5 +17,5 @@ export const getLongText = () => `
  `;
 
 export const InputContainer = ({ children }) => (
-  <div style={{ padding: 25, width: 500 }}>{children}</div>
+  <div style={{ width: 500 }}>{children}</div>
 );

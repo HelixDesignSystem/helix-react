@@ -25,6 +25,7 @@ storiesOf('Search', module)
           {...(required && { required })}
           {...(position && { position })}
           onChange={action('change')}
+          autocomplete="off"
         />
       </InputContainer>
     );
@@ -49,6 +50,7 @@ storiesOf('Search', module)
           }}
           onFocus={(e) => action('onFocus')}
           onBlur={(e) => action('onBlur')}
+          autocomplete="off"
           {...(disabled && { disabled })}
           {...(label && { label })}
           {...(optional && { optional })}
