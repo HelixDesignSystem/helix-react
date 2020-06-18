@@ -58,12 +58,8 @@ storiesOf('Search', module)
           <header>Search for "{value}"</header>
           <section>
             <header>Category Header</header>
-            {POSITIONS.filter(p => p.search(value) !== -1).map(item => (
-              <button
-                className="hxSearchSuggestion"
-                key={item}
-                onClick={() => setValue(item)}
-              >
+            {POSITIONS.filter((p) => p.search(value) !== -1).map((item) => (
+              <button className="hxSearchSuggestion" key={item} onClick={() => setValue(item)}>
                 Here is a possible match: {item}
               </button>
             ))}

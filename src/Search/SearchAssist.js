@@ -12,7 +12,7 @@ import useClickOutside from 'use-onclickoutside';
 const SearchAssist = ({ children, onFocus, onBlur, position, ...rest }) => {
   const [open, setOpen] = useState(false);
   const searchRef = useRef();
-  useClickOutside(searchRef, e => setOpen(false));
+  useClickOutside(searchRef, (e) => setOpen(false));
 
   return (
     <div ref={searchRef}>
