@@ -11,9 +11,11 @@ import useClickOutside from 'use-onclickoutside';
  */
 const SearchAssist = ({ children, onFocus, onBlur, position, ...rest }) => {
   const [open, setOpen] = useState(false);
+
   const searchRef = useRef();
   useClickOutside(searchRef, (e) => setOpen(false));
 
+  const hasChildren = React.Children.toArray(children).filter(c => c).length > 0;
   return (
     <div ref={searchRef}>
       <Search
@@ -24,14 +26,16 @@ const SearchAssist = ({ children, onFocus, onBlur, position, ...rest }) => {
         }}
         wrapperId={`${rest.id}-hx-search-control`}
       />
-      <SearchAssistance
-        relativeTo={`${rest.id}-hx-search-control`}
-        open={wcBool(open)}
-        position={position}
-        onClick={() => setOpen(false)}
-      >
-        {children}
-      </SearchAssistance>
+      {hasChildren &&
+        <SearchAssistance
+          relativeTo={`${rest.id}-hx-search-control`}
+          open={wcBool(open)}
+          position={position}
+          onClick={() => setOpen(false)}
+        >
+          {children}
+        </SearchAssistance>
+      }
     </div>
   );
 };
