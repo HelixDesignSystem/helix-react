@@ -13,9 +13,10 @@ const SearchAssist = ({ children, onFocus, onBlur, position, ...rest }) => {
   const [open, setOpen] = useState(false);
 
   const searchRef = useRef();
-  useClickOutside(searchRef, (e) => setOpen(false));
+  useClickOutside(searchRef, () => setOpen(false));
 
-  const hasChildren = React.Children.toArray(children).filter(c => c).length > 0;
+  const hasChildren = React.Children.toArray(children).filter((c) => c).length > 0;
+
   return (
     <div ref={searchRef}>
       <Search
@@ -26,7 +27,7 @@ const SearchAssist = ({ children, onFocus, onBlur, position, ...rest }) => {
         }}
         wrapperId={`${rest.id}-hx-search-control`}
       />
-      {hasChildren &&
+      {hasChildren && (
         <SearchAssistance
           relativeTo={`${rest.id}-hx-search-control`}
           open={wcBool(open)}
@@ -35,7 +36,7 @@ const SearchAssist = ({ children, onFocus, onBlur, position, ...rest }) => {
         >
           {children}
         </SearchAssistance>
-      }
+      )}
     </div>
   );
 };
