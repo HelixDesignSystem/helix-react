@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const getShortText = () => `lorem ipsum dolor sir amet`;
 
 export const getLongText = () => `
@@ -13,3 +15,5 @@ export const getLongText = () => `
   elementum integer enim neque volutpat. Etiam sit amet nisl purus in mollis nunc. Diam sit amet
   nisl suscipit. Nulla pharetra diam sit amet nisl. Arcu odio ut sem nulla.
  `;
+
+export const InputContainer = ({ children }) => <div style={{ width: 500 }}>{children}</div>;
