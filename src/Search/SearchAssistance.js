@@ -15,7 +15,7 @@ const SearchAssistance = ({ children, className, relativeTo, ...rest }) => {
 
 SearchAssistance.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string, 
+  className: PropTypes.string,
   relativeTo: PropTypes.string.isRequired,
   position: PropTypes.oneOf(POSITIONS),
 };

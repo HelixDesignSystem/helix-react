@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Icon from '../Icon';
 import { wcBool } from '../utils';
 
@@ -18,11 +18,34 @@ const Search = ({
   optional,
   required,
   wrapperId,
+  value,
   ...rest
 }) => {
+  /**
+   * Show clear icon when value changes programmatically by triggering 'input' event manually.
+   */
+  const inputRef = useRef();
+  useEffect(() => {
+    const input = inputRef.current;
+    const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
+      window.HTMLInputElement.prototype,
+      'value'
+    ).set;
+    nativeInputValueSetter.call(input, value);
+    const ev = new Event('input', { bubbles: true });
+    input.dispatchEvent(ev);
+  }, [value]);
+
   return (
     <hx-search-control class={className} id={wrapperId}>
-      <input id={id} {...rest} disabled={wcBool(disabled)} type="search" />
+      <input
+        id={id}
+        value={value}
+        ref={inputRef}
+        {...rest}
+        disabled={wcBool(disabled)}
+        type="search"
+      />
       <button type="button" className="hxClear" aria-label={clearLabel} hidden onClick={onClear}>
         <Icon type="times" />
       </button>
