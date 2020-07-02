@@ -1,8 +1,9 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import Icon from '../Icon';
 import { wcBool } from '../utils';
+import { useEffectExceptOnMount } from '../hooks/useEffectExceptOnMounted';
 
 /**
  * @see https://helixdesignsystem.github.io/helix-ui/components/search/
@@ -23,9 +24,10 @@ const Search = ({
 }) => {
   /**
    * Show clear icon when value changes programmatically by triggering 'input' event manually.
+   * @see https://stackoverflow.com/questions/23892547/what-is-the-best-way-to-trigger-onchange-event-in-react-js
    */
   const inputRef = useRef();
-  useEffect(() => {
+  useEffectExceptOnMount(() => {
     const input = inputRef.current;
     const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
       window.HTMLInputElement.prototype,
