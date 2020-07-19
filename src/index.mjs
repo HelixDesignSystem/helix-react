@@ -1,6 +1,7 @@
 /* Export helix-react definition */
 import Alert from './Alert';
 import Button from './Button';
+import Checkbox from './Checkbox';
 import ChoiceTile from './ChoiceTile';
 import Drawer from './Drawer';
 import Icon from './Icon';
@@ -14,6 +15,7 @@ import SearchAssist from './Search/SearchAssist';
 export default {
   Alert,
   Button,
+  Checkbox,
   ChoiceTile,
   Drawer,
   Icon,
