@@ -8,9 +8,12 @@ import Icon from './Icon';
 import Modal from './Modal';
 import Popover from './Popover';
 import Tooltip from './Tooltip';
-import Select from './Select';
+import Radio from './Radio';
+import RadioSet from './Radio/RadioSet';
 import Search from './Search';
 import SearchAssist from './Search/SearchAssist';
+import Select from './Select';
+
 
 export default {
   Alert,
@@ -21,8 +24,10 @@ export default {
   Icon,
   Modal,
   Popover,
-  Select,
   Tooltip,
+  Radio,
+  RadioSet,
   Search,
-  SearchAssist
+  SearchAssist,
+  Select,
 };
