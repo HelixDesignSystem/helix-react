@@ -2,9 +2,9 @@
   "name": "@helix-design-system/helix-react",
   "version": "1.0.0-alpha.3",
   "description": "React components to wrap HelixUI custom elements",
-  "main": "dist/index.mjs",
-  "module": "dist/index.mjs",
-  "unpkg": "dist/index.mjs",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "unpkg": "dist/index.js",
   "files": [
     "dist"
   ],
