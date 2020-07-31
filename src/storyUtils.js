@@ -16,4 +16,4 @@ export const getLongText = () => `
   nisl suscipit. Nulla pharetra diam sit amet nisl. Arcu odio ut sem nulla.
  `;
 
-export const InputContainer = ({ children }) => <div style={{ width: 500 }}>{children}</div>;
+export const InputContainer = ({ children }) => <div style={{ width: 500, marginBottom: 30 }}>{children}</div>;

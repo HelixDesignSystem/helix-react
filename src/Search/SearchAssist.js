@@ -25,7 +25,7 @@ const SearchAssist = ({ children, onFocus, onBlur, position, ...rest }) => {
           setOpen(true);
           onFocus && onFocus(e);
         }}
-        wrapperId={`${rest.id}-hx-search-control`}
+        containerId={`${rest.id}-hx-search-control`}
       />
       {hasChildren && (
         <SearchAssistance
@@ -48,7 +48,7 @@ SearchAssist.propTypes = {
   clearLabel: PropTypes.string,
   label: PropTypes.string,
   id: PropTypes.string.isRequired,
-  wrapperId: PropTypes.string,
+  containerId: PropTypes.string,
   disabled: PropTypes.bool,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
