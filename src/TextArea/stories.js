@@ -5,13 +5,12 @@ import { storiesOf } from '@storybook/react';
 import TextArea from './index';
 import { InputContainer } from '../storyUtils';
 
-storiesOf('TextArea', module)
-  .add('All Knobs', () => {
-    let disabled = boolean('disabled', false);
-    let required = boolean('required', false);
-    let optional = boolean('optional', false);
+storiesOf('TextArea', module).add('All Knobs', () => {
+  let disabled = boolean('disabled', false);
+  let required = boolean('required', false);
+  let optional = boolean('optional', false);
 
-    return (
+  return (
     <InputContainer>
       <TextArea
         id="textAreaDemo"
@@ -22,5 +21,5 @@ storiesOf('TextArea', module)
         onChange={action('onChange')}
       />
     </InputContainer>
-    );
-  });
+  );
+});

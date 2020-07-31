@@ -8,8 +8,8 @@ const TextArea = ({ id, label, containerClass, required, optional, children, ...
       <textarea {...rest} id={id} required={required} />
       <label
         className={classnames({
-            hxOptional: optional,
-            hxRequired: required
+          hxOptional: optional,
+          hxRequired: required,
         })}
         htmlFor={id}
       >

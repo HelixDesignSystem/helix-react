@@ -2,7 +2,17 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Select = ({ children, containerClass, disabled, id, label, onChange, optional, required, ...rest }) => {
+const Select = ({
+  children,
+  containerClass,
+  disabled,
+  id,
+  label,
+  onChange,
+  optional,
+  required,
+  ...rest
+}) => {
   return (
     <hx-select-control class={containerClass}>
       <select id={id} disabled={disabled} onChange={onChange} required={required} {...rest}>

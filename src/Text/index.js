@@ -2,14 +2,24 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
 
-const Text = ({ id, label, containerClass, required, optional, children, prefix, suffix, ...rest }) => {
+const Text = ({
+  id,
+  label,
+  containerClass,
+  required,
+  optional,
+  children,
+  prefix,
+  suffix,
+  ...rest
+}) => {
   return (
     <hx-text-control class={containerClass}>
       <input {...rest} id={id} required={required} type="text" />
       <label
         className={classnames({
-            hxOptional: optional,
-            hxRequired: required
+          hxOptional: optional,
+          hxRequired: required,
         })}
         htmlFor={id}
       >

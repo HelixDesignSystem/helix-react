@@ -13,8 +13,8 @@ storiesOf('Select', module)
     let disabled = boolean('disabled', false);
     let optional = boolean('optional', false);
     let required = boolean('required', false);
-    let help = text('help', '' );
-    let error = text('error', '' );
+    let help = text('help', '');
+    let error = text('error', '');
 
     return (
       <Demo
