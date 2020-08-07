@@ -8,7 +8,7 @@
   "module": "dist/helix-react.m.js",
   "scripts": {
     "install:clean": "rm -rf node_modules && yarn install",
-    "build": "microbundle -i src/index.mjs --external react,react-dom --name HelixReact --jsx React.createElement --jsxFragment React.Fragment --compress false --sourcemap false",
+    "build": "microbundle -i src/index.mjs --external react,react-dom,classnames,use-onclickoutside --name HelixReact --jsx React.createElement --jsxFragment React.Fragment --compress false --sourcemap false",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "yarn storybook",
     "docs": "build-storybook -c .storybook -o public",
@@ -55,15 +55,17 @@
     "husky": "^4.2.5",
     "microbundle": "^0.12.3",
     "prettier": "^2.0.4",
-    "classnames": "^2.2.6",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "use-onclickoutside": "^0.3.1",
     "prop-types": "^15.7.2"
+  },
+  "dependencies": {
+    "use-onclickoutside": "^0.3",
+    "classnames": "^2.x"
   },
   "peerDependencies": {
     "helix-ui": "^0.23.0",
-    "prop-types": "15.x",
+    "prop-types": "^15.7.2",
     "react": "^16.6.3"
   },
   "husky": {
