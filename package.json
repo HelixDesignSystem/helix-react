@@ -53,18 +53,18 @@
     "babel-loader": "^8.1.0",
     "helix-ui": "^0.23.0",
     "husky": "^4.2.5",
+    "microbundle": "^0.12.3",
     "prettier": "^2.0.4",
-    "prop-types": "^15.7.2",
+    "classnames": "^2.2.6",
+    "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react": "^16.6.3"
+    "use-onclickoutside": "^0.3.1",
+    "prop-types": "^15.7.2"
   },
   "peerDependencies": {
-    "react": "^16.6.3",
     "helix-ui": "^0.23.0",
-    "react-dom": "^16.6.3",
     "prop-types": "15.x",
-    "classnames": "^2.2.6",
-    "use-onclickoutside": "^0.3.1"
+    "react": "^16.6.3"
   },
   "husky": {
     "hooks": {
