@@ -5,7 +5,7 @@ import classnames from 'classnames';
 const Text = ({
   id,
   label,
-  containerClass,
+  className,
   required,
   optional,
   children,
@@ -14,7 +14,7 @@ const Text = ({
   ...rest
 }) => {
   return (
-    <hx-text-control class={containerClass}>
+    <hx-text-control class={className}>
       <input {...rest} id={id} required={required} type="text" />
       <label
         className={classnames({
@@ -35,7 +35,7 @@ const Text = ({
 
 Text.propTypes = {
   id: PropTypes.string.isRequired,
-  containerClass: PropTypes.string,
+  className: PropTypes.string,
   children: PropTypes.node,
   optional: PropTypes.bool,
   disabled: PropTypes.bool,

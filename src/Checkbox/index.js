@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import React, { useRef, useEffect } from 'react';
 
-const Checkbox = ({ id, label, indeterminate, ...rest }) => {
+const Checkbox = ({ id, label, indeterminate, className, ...rest }) => {
   const inputRef = useRef();
   useEffect(() => {
     inputRef.current.indeterminate = indeterminate;
   }, [indeterminate]);
 
   return (
-    <hx-checkbox-control>
+    <hx-checkbox-control class={className}>
       <input ref={inputRef} {...rest} id={id} type="checkbox" />
       <label htmlFor={id}>
         <hx-checkbox></hx-checkbox>
@@ -19,6 +19,7 @@ const Checkbox = ({ id, label, indeterminate, ...rest }) => {
 };
 
 Checkbox.propTypes = {
+  className: PropTypes.string.isRequired,
   checked: PropTypes.bool.isRequired,
   id: PropTypes.string.isRequired,
   disabled: PropTypes.bool,

@@ -3,7 +3,7 @@ import React from 'react';
 
 const Radio = ({ id, label, className, ...rest }) => {
   return (
-    <hx-radio-control>
+    <hx-radio-control class={className}>
       <input {...rest} id={id} type="radio" />
       <label htmlFor={id}>
         <hx-radio></hx-radio>
@@ -14,6 +14,7 @@ const Radio = ({ id, label, className, ...rest }) => {
 };
 
 Radio.propTypes = {
+  className: PropTypes.string,
   checked: PropTypes.bool.isRequired,
   id: PropTypes.string.isRequired,
   disabled: PropTypes.bool,

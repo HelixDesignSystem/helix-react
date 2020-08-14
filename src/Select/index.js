@@ -4,7 +4,7 @@ import React from 'react';
 
 const Select = ({
   children,
-  containerClass,
+  className,
   disabled,
   id,
   label,
@@ -14,7 +14,7 @@ const Select = ({
   ...rest
 }) => {
   return (
-    <hx-select-control class={containerClass}>
+    <hx-select-control class={className}>
       <select id={id} disabled={disabled} onChange={onChange} required={required} {...rest}>
         {children}
       </select>
@@ -36,7 +36,7 @@ const Select = ({
 
 Select.propTypes = {
   children: PropTypes.node.isRequired,
-  containerClass: PropTypes.string,
+  className: PropTypes.string,
   disabled: PropTypes.bool.isRequired,
   id: PropTypes.string.isRequired,
   label: PropTypes.string,
