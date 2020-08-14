@@ -6,7 +6,7 @@ import useEventListener from '../hooks/useEventListener';
 const Pill = ({ className, children, onDismiss, ...rest }) => {
   const hxRef = useEventListener({ onDismiss });
   return (
-    <hx-pill class={className} {...rest} ref={hxRef} >
+    <hx-pill class={className} {...rest} ref={hxRef}>
       {children}
     </hx-pill>
   );

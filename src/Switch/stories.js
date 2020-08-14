@@ -10,13 +10,13 @@ storiesOf('Switch', module).add('All Knobs', () => {
   let invalid = boolean('invalid', false);
 
   return (
-      <InputContainer>
-        <Switch
-          id="textDemo"
-          {...(disabled && { disabled })}
-          {...(invalid && { invalid })}
-          onChange={action('onChange')}
-        />
-      </InputContainer>
+    <InputContainer>
+      <Switch
+        id="textDemo"
+        {...(disabled && { disabled })}
+        {...(invalid && { invalid })}
+        onChange={action('onChange')}
+      />
+    </InputContainer>
   );
 });

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
 
-const Switch = ({ id, className, onLabel, offLabel,invalid,  ...rest }) => {
+const Switch = ({ id, className, onLabel, offLabel, invalid, ...rest }) => {
   return (
     <hx-switch-control class={classnames('switch', className)}>
       <input type="checkbox" id={id} {...rest} invalid={invalid?.toString()} />
@@ -26,8 +26,8 @@ Switch.propTypes = {
 };
 
 Switch.defaultProps = {
-  onLabel: "on",
-  offLabel: "off"
+  onLabel: 'on',
+  offLabel: 'off',
 };
 
 export default Switch;
