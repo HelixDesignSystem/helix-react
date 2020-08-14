@@ -1,10 +1,16 @@
 {
   "name": "@helix-design-system/helix-react",
-  "version": "0.1.0",
+  "version": "1.0.0-alpha.4",
   "description": "React components to wrap HelixUI custom elements",
-  "module": "src/index.mjs",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "unpkg": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "install:clean": "rm -rf node_modules && yarn install",
+    "build": "parcel build src/index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "yarn storybook",
     "docs": "build-storybook -c .storybook -o public",
@@ -16,18 +22,19 @@
     "type": "git",
     "url": "git+https://github.com/HelixDesignSystem/helix-react.git"
   },
-  "author": "Ryan A. Johnson <rhino.citguy@gmail.com>",
+  "author": "Helix Design System Helix-React Team",
   "contributors": [
     "Mike Mangialardi",
     "James Thompson",
     "Cathy Siller",
-    "Nicko Winner-Arroyo"
+    "Nicko Winner-Arroyo",
+    "Ryan A. Johnson"
   ],
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/HelixDesignSystem/helix-react/issues"
   },
-  "homepage": "https://helix-react.netlify.com/",
+  "homepage": "https://helix-react.netlify.app",
   "publishConfig": {
     "access": "public",
     "scope": "@helix-design-system"
@@ -35,6 +42,7 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.10.4",
     "@babel/runtime-corejs2": "^7.9.0",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-centered": "^5.3.18",
@@ -47,6 +55,7 @@
     "babel-loader": "^8.1.0",
     "helix-ui": "^0.24.0",
     "husky": "^4.2.5",
+    "parcel-bundler": "^1.12.4",
     "prettier": "^2.0.4",
     "prop-types": "^15.7.2",
     "react": "^16.6.3",

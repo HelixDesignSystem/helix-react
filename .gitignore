@@ -6,6 +6,9 @@ built
 dist
 public
 
+# parcel build cache
+.cache/
+
 # debug files
 npm-debug.log*
 yarn-debug.log*
