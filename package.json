@@ -8,7 +8,7 @@
   "module": "dist/index.m.js",
   "scripts": {
     "install:clean": "rm -rf node_modules && yarn install",
-    "build": "microbundle -i src/index.mjs --external react,react-dom,classnames,use-onclickoutside --name HelixReact --jsx React.createElement --jsxFragment React.Fragment --compress false --sourcemap false",
+    "build": "microbundle -i src/index.mjs --external react,react-dom --name HelixReact --jsx React.createElement --jsxFragment React.Fragment --compress false --sourcemap false",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "yarn storybook",
     "docs": "build-storybook -c .storybook -o public",
