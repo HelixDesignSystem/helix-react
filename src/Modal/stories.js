@@ -18,7 +18,7 @@ storiesOf('Modal', module).add('All Knobs', () => {
   let footer = text('footer', '');
   let open = boolean('open', true);
   let size = select('size', SIZES, 'medium');
-  let scroll = boolean('scroll', false);
+  let scroll = boolean('scroll', undefined);
 
   const smallText =
     'This is the body of a demo modal. Interaction with content behind this modal cannot take place until this modal is closed.\n';

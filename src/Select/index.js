@@ -37,7 +37,7 @@ const Select = ({
 Select.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  disabled: PropTypes.bool.isRequired,
+  disabled: PropTypes.bool,
   id: PropTypes.string.isRequired,
   label: PropTypes.string,
   onChange: PropTypes.func.isRequired,

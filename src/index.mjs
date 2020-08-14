@@ -6,6 +6,8 @@ import ChoiceTile from './ChoiceTile';
 import Drawer from './Drawer';
 import Icon from './Icon';
 import Modal from './Modal';
+import Pill from './Pill';
+import Status from './Pill/Status';
 import Popover from './Popover';
 import Tooltip from './Tooltip';
 import Radio from './Radio';
@@ -23,11 +25,13 @@ export default {
   Drawer,
   Icon,
   Modal,
+  Pill,
   Popover,
   Tooltip,
   Radio,
   RadioSet,
   Search,
+  Status,
   SearchAssist,
   Select,
 };

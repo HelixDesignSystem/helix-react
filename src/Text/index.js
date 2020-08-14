@@ -30,7 +30,7 @@ Text.propTypes = {
   optional: PropTypes.bool,
   disabled: PropTypes.bool,
   required: PropTypes.bool,
-  label: PropTypes.bool,
+  label: PropTypes.string,
   name: PropTypes.string,
   prefix: PropTypes.node,
   suffix: PropTypes.node,

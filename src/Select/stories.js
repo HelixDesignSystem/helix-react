@@ -27,7 +27,7 @@ storiesOf('Select', module)
 const Demo = (props) => {
   return (
     <InputContainer>
-      <Select label="Select" onChange={action(`selected`)} {...props}>
+      <Select id="my-select" label="Select" onChange={action(`selected`)} {...props}>
         <Options />
       </Select>
     </InputContainer>

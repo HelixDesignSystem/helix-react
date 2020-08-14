@@ -16,7 +16,7 @@ storiesOf('Popover', module)
     let header = text('header', 'Popover Header');
     let footer = text('footer', '');
     let position = select('positions', POSITIONS, 'bottom-right');
-    let scroll = boolean('scroll', false);
+    let scroll = boolean('scroll', undefined);
 
     const smallText = 'This is the body of a demo popover\n';
     const longText = [1, 2, 3, 4, 5].map(() => <p>{getLongText()}</p>);

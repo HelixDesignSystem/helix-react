@@ -1728,6 +1728,11 @@
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
 
+"@webcomponents/webcomponentsjs@^2.4.3":
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-2.4.4.tgz#14b7e78da47f8f0071ff96c35335b871534179bc"
+  integrity sha512-UWXZYbaDLLfhm+xONXTiDciyhOSwKRrZieGQHFMSMGSxY4mbjZ5uYzOKgnuX0luYFvjJw32G3r0sCwQZPJIR4Q==
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
@@ -4159,9 +4164,10 @@ he@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
 
-helix-ui@^0.19.0:
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/helix-ui/-/helix-ui-0.19.0.tgz#c2c3455081bf620259c39ee87f28d484604a013a"
+helix-ui@^0.24.0:
+  version "0.24.0"
+  resolved "https://registry.yarnpkg.com/helix-ui/-/helix-ui-0.24.0.tgz#db5e0c2e4f446192f9277ace0e0e2ded49de7fcd"
+  integrity sha512-vP2t5K9Gj3fdyZvmLobT3FlWU+EDr9J6UhwA6HGQlNmrdA42OeQCzg2I4W2l3a5vtNHQfVvjt4vsURFZ7QO/KA==
 
 highlight.js@~9.13.0:
   version "9.13.1"

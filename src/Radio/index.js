@@ -15,11 +15,11 @@ const Radio = ({ id, label, className, ...rest }) => {
 
 Radio.propTypes = {
   className: PropTypes.string,
-  checked: PropTypes.bool.isRequired,
+  checked: PropTypes.bool,
   id: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
   required: PropTypes.bool,
-  label: PropTypes.bool,
+  label: PropTypes.string,
   name: PropTypes.string,
   onChange: PropTypes.func,
 };
