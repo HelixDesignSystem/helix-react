@@ -2,17 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
 
-const Text = ({
-  id,
-  label,
-  className,
-  required,
-  optional,
-  children,
-  prefix,
-  suffix,
-  ...rest
-}) => {
+const Text = ({ id, label, className, required, optional, children, prefix, suffix, ...rest }) => {
   return (
     <hx-text-control class={className}>
       <input {...rest} id={id} required={required} type="text" />
