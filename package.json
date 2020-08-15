@@ -2,15 +2,13 @@
   "name": "@helix-design-system/helix-react",
   "version": "1.0.0-alpha.4",
   "description": "React components to wrap HelixUI custom elements",
+  "source": "src/index.mjs",
   "main": "dist/index.js",
-  "module": "dist/index.js",
-  "unpkg": "dist/index.js",
-  "files": [
-    "dist"
-  ],
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.m.js",
   "scripts": {
     "install:clean": "rm -rf node_modules && yarn install",
-    "build": "parcel build src/index.mjs",
+    "build": "microbundle -i src/index.mjs --external react,react-dom --name HelixReact --jsx React.createElement --jsxFragment React.Fragment --compress false --sourcemap false",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "yarn storybook",
     "docs": "build-storybook -c .storybook -o public",
@@ -55,15 +53,20 @@
     "babel-loader": "^8.1.0",
     "helix-ui": "^0.23.0",
     "husky": "^4.2.5",
-    "parcel-bundler": "^1.12.4",
+    "microbundle": "^0.12.3",
     "prettier": "^2.0.4",
-    "prop-types": "^15.7.2",
     "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react-dom": "^16.6.3",
+    "prop-types": "^15.7.2"
   },
   "dependencies": {
-    "classnames": "^2.2.6",
-    "use-onclickoutside": "^0.3.1"
+    "use-onclickoutside": "^0.3",
+    "classnames": "^2.x"
+  },
+  "peerDependencies": {
+    "helix-ui": "^0.23.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.6.3"
   },
   "husky": {
     "hooks": {
