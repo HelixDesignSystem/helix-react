@@ -2,9 +2,19 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Select = ({ children, disabled, id, label, onChange, optional, required, ...rest }) => {
+const Select = ({
+  children,
+  className,
+  disabled,
+  id,
+  label,
+  onChange,
+  optional,
+  required,
+  ...rest
+}) => {
   return (
-    <hx-select-control>
+    <hx-select-control class={className}>
       <select id={id} disabled={disabled} onChange={onChange} required={required} {...rest}>
         {children}
       </select>
@@ -26,18 +36,13 @@ const Select = ({ children, disabled, id, label, onChange, optional, required, .
 
 Select.propTypes = {
   children: PropTypes.node.isRequired,
-  disabled: PropTypes.bool.isRequired,
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
   id: PropTypes.string.isRequired,
   label: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   optional: PropTypes.bool,
   required: PropTypes.bool,
-};
-
-Select.defaultProps = {
-  disabled: false,
-  optional: false,
-  required: false,
 };
 
 export default Select;

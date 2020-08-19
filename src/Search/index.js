@@ -18,7 +18,7 @@ const Search = ({
   onClear,
   optional,
   required,
-  wrapperId,
+  containerId,
   value,
   ...rest
 }) => {
@@ -39,7 +39,7 @@ const Search = ({
   }, [value]);
 
   return (
-    <hx-search-control class={className} id={wrapperId}>
+    <hx-search-control class={className} id={containerId}>
       <input
         id={id}
         value={value}
@@ -72,7 +72,7 @@ Search.propTypes = {
   clearLabel: PropTypes.string,
   label: PropTypes.string,
   id: PropTypes.string.isRequired,
-  wrapperId: PropTypes.string,
+  containerId: PropTypes.string,
   disabled: PropTypes.bool,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,

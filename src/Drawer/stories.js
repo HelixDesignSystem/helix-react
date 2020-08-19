@@ -24,7 +24,7 @@ storiesOf('Drawer', module).add('All Knobs', () => {
   const defaultBody = <p>{getLongText()}</p>;
   const defaultHeader = 'Drawer Header';
   const defaultFooter = (
-    <div class="hxButtonSet">
+    <div className="hxButtonSet">
       <Button variant="primary">Confirm</Button>
       <Button variant="tertiary">Cancel</Button>
     </div>
@@ -36,6 +36,7 @@ storiesOf('Drawer', module).add('All Knobs', () => {
       {...(size && { size })}
       onOpen={action('onOpen')}
       onClose={action('onClose')}
+      id="drawer-id"
     >
       {<header>{header || defaultHeader}</header>}
       {<Div className="hxMd">{body || defaultBody}</Div>}

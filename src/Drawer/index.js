@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import classnames from 'classnames';
 
 import { SIZES } from '../constants';
 import useEventListener from '../hooks/useEventListener';
@@ -8,7 +9,13 @@ import { wcBool } from '../utils';
 const Drawer = ({ children, className, id, onClose, onOpen, open, size, ...rest }) => {
   const hxRef = useEventListener({ onOpen, onClose });
   return (
-    <hx-drawer class={(className, SIZES[size])} id={id} open={wcBool(open)} ref={hxRef} {...rest}>
+    <hx-drawer
+      class={classnames(className, SIZES[size])}
+      id={id}
+      open={wcBool(open)}
+      ref={hxRef}
+      {...rest}
+    >
       {children}
     </hx-drawer>
   );

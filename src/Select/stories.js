@@ -5,19 +5,19 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 
 import Select from '../Select';
+import { InputContainer } from '../storyUtils';
 
 storiesOf('Select', module)
   .addDecorator(centered)
   .add('All Knobs', () => {
     let disabled = boolean('disabled', false);
-    let label = text('label', '');
     let optional = boolean('optional', false);
     let required = boolean('required', false);
 
     return (
       <Demo
         {...(disabled && { disabled })}
-        {...(label && { label })}
+        label="Select Me"
         {...(optional && { optional })}
         {...(required && { required })}
       />
@@ -26,11 +26,11 @@ storiesOf('Select', module)
 
 const Demo = (props) => {
   return (
-    <div style={{ padding: 25, width: 500 }}>
-      <Select label="Select" onChange={action(`selected`)} {...props}>
+    <InputContainer>
+      <Select id="my-select" label="Select" onChange={action(`selected`)} {...props}>
         <Options />
       </Select>
-    </div>
+    </InputContainer>
   );
 };
 
