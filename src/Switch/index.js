@@ -15,8 +15,8 @@ const Switch = ({ id, className, onLabel, offLabel, invalid, ...rest }) => {
 
 Switch.propTypes = {
   id: PropTypes.string.isRequired,
-  onLabel: PropTypes.string.isRequired,
-  offLabel: PropTypes.string.isRequired,
+  onLabel: PropTypes.string,
+  offLabel: PropTypes.string,
   className: PropTypes.string,
   disabled: PropTypes.bool,
   invalid: PropTypes.bool,
@@ -26,8 +26,8 @@ Switch.propTypes = {
 };
 
 Switch.defaultProps = {
-  onLabel: 'on',
-  offLabel: 'off',
+  onLabel: '',
+  offLabel: '',
 };
 
 export default Switch;

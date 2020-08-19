@@ -14,12 +14,12 @@ const Radio = ({ id, label, className, ...rest }) => {
 };
 
 Radio.propTypes = {
+  label: PropTypes.string.isRequired,
   className: PropTypes.string,
   checked: PropTypes.bool,
   id: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
   required: PropTypes.bool,
-  label: PropTypes.string,
   name: PropTypes.string,
   onChange: PropTypes.func,
 };

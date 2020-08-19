@@ -48,7 +48,6 @@ SearchAssist.propTypes = {
   clearLabel: PropTypes.string,
   label: PropTypes.string,
   id: PropTypes.string.isRequired,
-  containerId: PropTypes.string,
   disabled: PropTypes.bool,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
