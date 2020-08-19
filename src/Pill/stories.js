@@ -18,7 +18,7 @@ storiesOf('Pill', module)
   .add('Status Pill', () => {
     let filled = boolean('filled', false);
     let pillText = text('pill text', 'default');
-    let variant = select('variant', ['default' , 'grey', 'purple', 'subdued']);
+    let variant = select('variant', ['default', 'grey', 'purple', 'subdued']);
     return (
       <Status variant={variant} {...(filled && { filled })}>
         {pillText}
