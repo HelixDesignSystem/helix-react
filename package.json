@@ -5,7 +5,7 @@
   "source": "src/index.mjs",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
-  "module": "dist/index.m.js",
+  "module": "dist/index.js",
   "scripts": {
     "install:clean": "rm -rf node_modules && yarn install",
     "build": "microbundle -i src/index.mjs --external react,react-dom --name HelixReact --jsx React.createElement --jsxFragment React.Fragment --compress false --sourcemap false",
