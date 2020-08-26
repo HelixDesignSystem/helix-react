@@ -4,7 +4,7 @@
   "description": "React components to wrap HelixUI custom elements",
   "source": "src/index.mjs",
   "main": "dist/helix-react.js",
-  "module": "dist/helix-react.module.js",
+  "module": "dist/helix-react.esm.js",
   "unpkg": "dist/helix-react.umd.js",
   "scripts": {
     "install:clean": "rm -rf node_modules && yarn install",
