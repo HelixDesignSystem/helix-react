@@ -5,7 +5,7 @@
   "source": "src/index.mjs",
   "main": "dist/helix-react.js",
   "module": "dist/helix-react.esm.js",
-  "unpkg": "dist/helix-react.umd.js",
+  "unpkg": "dist/helix-react.js",
   "scripts": {
     "install:clean": "rm -rf node_modules && yarn install",
     "build": "microbundle -i src/index.mjs --external react,react-dom --name HelixReact --jsx React.createElement --jsxFragment React.Fragment --compress false --sourcemap false",
