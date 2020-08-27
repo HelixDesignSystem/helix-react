@@ -42,7 +42,11 @@ you can also see the components in Storybook in order to play around yourself.
 
 ## Installation
 
-More details to come.
+```npm -i @helix-design-system/helix-react helix-ui prop-types```
+
+or
+
+```yarn add @helix-design-system/helix-react helix-ui prop-types```
 
 ### Prerequisites
 

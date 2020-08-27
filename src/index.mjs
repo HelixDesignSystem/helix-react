@@ -21,7 +21,7 @@ import Text from './Text';
 import TextArea from './TextArea';
 import Tooltip from './Tooltip';
 
-export default {
+export {
   Alert,
   Button,
   Checkbox,
