@@ -20,7 +20,7 @@ const ChoiceTile = ({
   ...rest
 }) => {
   return (
-    <label className={classNames({ hxChoice: true, className })}>
+    <label className={classNames({ hxChoice: true }, className)}>
       <input
         checked={wcBool(checked)}
         disabled={disabled}
