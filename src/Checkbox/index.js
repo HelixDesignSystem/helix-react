@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useRef, useEffect } from 'react';
 
-const Checkbox = ({ id, label, indeterminate, className, ...rest }) => {
+const Checkbox = ({ id, label, indeterminate, className, style, ...rest }) => {
   const inputRef = useRef();
   useEffect(() => {
     inputRef.current.indeterminate = indeterminate;
@@ -20,6 +20,7 @@ const Checkbox = ({ id, label, indeterminate, className, ...rest }) => {
 
 Checkbox.propTypes = {
   className: PropTypes.string,
+  style: PropTypes.object,
   checked: PropTypes.bool,
   id: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
