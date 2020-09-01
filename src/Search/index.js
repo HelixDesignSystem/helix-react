@@ -20,6 +20,7 @@ const Search = ({
   required,
   containerId,
   value,
+  style,
   ...rest
 }) => {
   /**
@@ -39,7 +40,7 @@ const Search = ({
   }, [value]);
 
   return (
-    <hx-search-control class={className} id={containerId}>
+    <hx-search-control class={className} id={containerId} style={style}>
       <input
         id={id}
         value={value}
@@ -69,6 +70,7 @@ const Search = ({
 
 Search.propTypes = {
   className: PropTypes.string,
+  style: PropTypes.object,
   clearLabel: PropTypes.string,
   label: PropTypes.string,
   id: PropTypes.string.isRequired,

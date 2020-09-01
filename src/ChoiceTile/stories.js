@@ -46,7 +46,7 @@ storiesOf('Choice Tile', module).add('All Knobs', () => {
         icon={icon}
         name="choiceTileDemo"
         onChange={action('onChange')}
-        style={{ width: 200 }}
+        style={{ width: 200, float: 'left' }}
         title={title || defaultTitle}
       >
         {<p>{description || defaultDescription}</p>}
@@ -55,7 +55,7 @@ storiesOf('Choice Tile', module).add('All Knobs', () => {
       <ChoiceTile
         icon="bell"
         name="choiceTileDemo"
-        style={{ marginLeft: 25, width: 200 }}
+        style={{ marginLeft: 25, width: 200, float: 'left' }}
         title="Other Choice"
       >
         {<p>{defaultDescription}</p>}
