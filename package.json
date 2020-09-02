@@ -6,6 +6,9 @@
   "main": "dist/helix-react.js",
   "module": "dist/helix-react.esm.js",
   "unpkg": "dist/helix-react.js",
+  "files":  [
+    "dist/"
+  ],
   "scripts": {
     "install:clean": "rm -rf node_modules && yarn install",
     "build": "microbundle -i src/index.mjs --external react,react-dom --name HelixReact --jsx React.createElement --jsxFragment React.Fragment --compress false --sourcemap false",
