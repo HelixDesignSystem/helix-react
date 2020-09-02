@@ -67,7 +67,7 @@
     "classnames": "^2.x"
   },
   "peerDependencies": {
-    "helix-ui": "^0.23.0",
+    "helix-ui": "^0.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.6.3"
   },
