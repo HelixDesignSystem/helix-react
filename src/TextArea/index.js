@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
 
-const TextArea = ({ id, label, className, required, optional, children, ...rest }) => {
+const TextArea = ({ id, label, className, required, optional, children, style, ...rest }) => {
   return (
-    <hx-textarea-control class={className}>
+    <hx-textarea-control class={className} style={style}>
       <textarea {...rest} id={id} required={required} />
       <label
         className={classnames({
@@ -23,6 +23,7 @@ const TextArea = ({ id, label, className, required, optional, children, ...rest 
 TextArea.propTypes = {
   id: PropTypes.string.isRequired,
   className: PropTypes.string,
+  style: PropTypes.object,
   children: PropTypes.node,
   optional: PropTypes.bool,
   disabled: PropTypes.bool,

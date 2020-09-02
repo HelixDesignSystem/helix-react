@@ -17,10 +17,11 @@ const ChoiceTile = ({
   size,
   subdued,
   title,
+  style,
   ...rest
 }) => {
   return (
-    <label className={classNames({ hxChoice: true, className })}>
+    <label className={classNames({ hxChoice: true }, className)} style={style}>
       <input
         checked={wcBool(checked)}
         disabled={disabled}
@@ -28,8 +29,9 @@ const ChoiceTile = ({
         name={name}
         onChange={onChange}
         type="radio"
+        {...rest}
       />
-      <hx-tile class={classNames({ hxSubdued: subdued, [SIZES[size]]: true })} {...rest}>
+      <hx-tile class={classNames({ hxSubdued: subdued, [SIZES[size]]: true })}>
         <hx-icon type="checkmark"></hx-icon>
         {icon && (
           <div className="hx-tile-icon">
@@ -47,6 +49,7 @@ ChoiceTile.propTypes = {
   checked: PropTypes.bool.isRequired,
   children: PropTypes.node,
   className: PropTypes.string,
+  style: PropTypes.object,
   disabled: PropTypes.bool,
   icon: PropTypes.string,
   invalid: PropTypes.bool,

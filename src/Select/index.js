@@ -11,10 +11,11 @@ const Select = ({
   onChange,
   optional,
   required,
+  style,
   ...rest
 }) => {
   return (
-    <hx-select-control class={className}>
+    <hx-select-control class={className} style={style}>
       <select id={id} disabled={disabled} onChange={onChange} required={required} {...rest}>
         {children}
       </select>
@@ -37,6 +38,7 @@ const Select = ({
 Select.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  style: PropTypes.object,
   disabled: PropTypes.bool,
   id: PropTypes.string.isRequired,
   label: PropTypes.string,
