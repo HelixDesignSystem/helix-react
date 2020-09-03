@@ -83,6 +83,9 @@ Follow the [Getting Started with HelixUI](https://helixdesignsystem.github.io/he
 ```
 
 ### Our Implementation
+```js
+ import { Disclosure, Div, Modal } from '@helix-design-system/helix-react';
+```
 
 ```jsx
 <Disclosure
@@ -103,6 +106,7 @@ Follow the [Getting Started with HelixUI](https://helixdesignsystem.github.io/he
     <Button variant="primary">Confirm</Button>
     <Button>Cancel</Button>
   </footer>
+</Modal>
 ```
 
 ## Guiding Principles
