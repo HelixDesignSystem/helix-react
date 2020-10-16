@@ -19,6 +19,7 @@ import Select from './Select';
 import Switch from './Switch';
 import Text from './Text';
 import TextArea from './TextArea';
+import Toast from './Toast';
 import Tooltip from './Tooltip';
 
 export {
@@ -42,5 +43,6 @@ export {
   Switch,
   Text,
   TextArea,
-  Tooltip
+  Toast,
+  Tooltip,
 };
