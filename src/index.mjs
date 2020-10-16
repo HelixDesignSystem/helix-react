@@ -1,6 +1,7 @@
 /* Export helix-react definition */
 import Alert from './Alert';
 import Button from './Button';
+import Busy from './Busy';
 import Checkbox from './Checkbox';
 import ChoiceTile from './ChoiceTile';
 import Disclosure from './Disclosure';
@@ -9,6 +10,7 @@ import Drawer from './Drawer';
 import Icon from './Icon';
 import Modal from './Modal';
 import Pill from './Pill';
+import Progress from './Progress';
 import Status from './Pill/Status';
 import Popover from './Popover';
 import Radio from './Radio';
@@ -24,6 +26,7 @@ import Tooltip from './Tooltip';
 export {
   Alert,
   Button,
+  Busy,
   Checkbox,
   ChoiceTile,
   Disclosure,
@@ -33,6 +36,7 @@ export {
   Modal,
   Pill,
   Popover,
+  Progress,
   Radio,
   RadioSet,
   Search,
