@@ -4,12 +4,12 @@ import classnames from 'classnames';
 import useEventListener from '../hooks/useEventListener';
 
 const Progress = ({ className, children, value, ...rest }) => {
-  return (<hx-progress class={className} {...rest} value={value.toString()}></hx-progress>);
+  return <hx-progress class={className} {...rest} value={value.toString()}></hx-progress>;
 };
 
 Progress.propTypes = {
   value: PropTypes.number,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default Progress;

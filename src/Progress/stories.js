@@ -7,9 +7,7 @@ import Progress from './index';
 storiesOf('Loader', module)
   .add('Busy', () => {
     let paused = boolean('paused', false);
-    return (
-      <Busy {...(paused && { paused })} />
-    );
+    return <Busy {...(paused && { paused })} />;
   })
   .add('Progress', () => {
     const options = {
@@ -18,8 +16,6 @@ storiesOf('Loader', module)
       max: 100,
       step: 1,
     };
-    let value = number('value', 40, options)
-    return (
-      <Progress value={value.toString()} />
-    );
+    let value = number('value', 40, options);
+    return <Progress value={value.toString()} />;
   });
