@@ -1,6 +1,7 @@
 /* Export helix-react definition */
 import Alert from './Alert';
 import Button from './Button';
+import Breadcrumb from './Breadcrumb';
 import Checkbox from './Checkbox';
 import ChoiceTile from './ChoiceTile';
 import Disclosure from './Disclosure';
@@ -24,6 +25,7 @@ import Tooltip from './Tooltip';
 export {
   Alert,
   Button,
+  Breadcrumb,
   Checkbox,
   ChoiceTile,
   Disclosure,
