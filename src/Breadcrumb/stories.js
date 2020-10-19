@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Breadcrumb from './index';
 
-storiesOf('Crumb', module)
-  .add('Multiple Crumbs', () => {
+storiesOf('Breadcrumb', module)
+  .add('Multiple Breadcrumbs', () => {
     return (
       <Breadcrumb>
         <a href="#">Home</a>
@@ -12,7 +12,7 @@ storiesOf('Crumb', module)
       </Breadcrumb>
     );
   })
-  .add('Single Crumb', () => {
+  .add('Single Breadcrumb', () => {
     return (
       <Breadcrumb>
         <a href="#">Home</a>
