@@ -5,12 +5,12 @@ import useEventListener from '../hooks/useEventListener';
 const Alert = ({ onOpen, onClose, className, children, onDismiss, onSubmit, ...rest }) => {
   const hxRef = useEventListener({ onDismiss, onSubmit });
   return (
-    <>
+    <div>
       {/* Wrappping element needed: Otherwise when alert removes itself from DOM on close, it will cause error */}
       <hx-alert class={className} ref={hxRef} {...rest}>
         {children}
       </hx-alert>
-    </>
+    </div>
   );
 };
 
