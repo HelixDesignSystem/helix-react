@@ -9,7 +9,9 @@
 
   A React wrapper of the [Helix UI Webcomponents Library](https://github.com/HelixDesignSystem/helix-ui/)
   
-  🚀 Alpha release coming this summer 🌻
+  🚀 Alpha release is [here](https://helix-react.netlify.app)! Check out how to get started below! 🌻
+ 
+  
 </div>
 
 <hr />
