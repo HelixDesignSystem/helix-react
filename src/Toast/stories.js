@@ -1,8 +1,13 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { addParameters, storiesOf } from '@storybook/react';
 import { select, text } from '@storybook/addon-knobs/react';
 import Toast from './index';
 import { action } from '@storybook/addon-actions';
+import { callback } from '../storyUtils';
+
+addParameters({
+  jsx: { skip:0 },
+});
 
 const TYPES = {
   info: 'info',
@@ -20,8 +25,8 @@ storiesOf('Toast', module).add('All Knobs', () => {
       {...(cta && { cta })}
       {...(status && { status })}
       {...(type && { type })}
-      onDismiss={action('onDismiss')}
-      onSubmit={action('onSubmit')}
+      onDismiss={callback(action('onDismiss'))}
+      onSubmit={callback(action('onSubmit'))}
     >
       {content}
     </Toast>

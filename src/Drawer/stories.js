@@ -1,12 +1,15 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs/react';
-import { storiesOf } from '@storybook/react';
-
+import { addParameters, storiesOf } from '@storybook/react';
 import Drawer from './index';
 import Button from '../Button';
 import Div from '../Div';
-import { getLongText } from '../storyUtils';
+import { callback, getLongText } from '../storyUtils';
+
+addParameters({
+  jsx: { skip: 0 },
+});
 
 const SIZES = {
   small: 'small',
@@ -34,8 +37,8 @@ storiesOf('Drawer', module).add('All Knobs', () => {
     <Drawer
       {...(open && { open })}
       {...(size && { size })}
-      onOpen={action('onOpen')}
-      onClose={action('onClose')}
+      onOpen={callback(action('onOpen'))}
+      onClose={callback(action('onClose'))}
       id="drawer-id"
     >
       {<header>{header || defaultHeader}</header>}

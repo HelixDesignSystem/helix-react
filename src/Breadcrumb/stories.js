@@ -1,6 +1,10 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { addParameters, storiesOf } from '@storybook/react';
 import Breadcrumb from './index';
+
+addParameters({
+  jsx: { skip: 0 },
+});
 
 storiesOf('Breadcrumb', module)
   .add('Multiple Breadcrumbs', () => {

@@ -58,13 +58,14 @@
     "husky": "^4.2.5",
     "microbundle": "^0.12.3",
     "prettier": "^2.0.4",
+    "prop-types": "^15.7.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "prop-types": "^15.7.2"
+    "storybook-addon-jsx": "^7.3.4"
   },
   "dependencies": {
-    "use-onclickoutside": "^0.3",
-    "classnames": "^2.x"
+    "classnames": "^2.x",
+    "use-onclickoutside": "^0.3"
   },
   "peerDependencies": {
     "helix-ui": "^0.24.0",

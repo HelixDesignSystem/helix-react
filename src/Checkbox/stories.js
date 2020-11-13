@@ -1,10 +1,13 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs/react';
-import { storiesOf } from '@storybook/react';
-
+import { addParameters, storiesOf } from '@storybook/react';
 import Checkbox from './index';
+import { callback } from '../storyUtils';
 
+addParameters({
+  jsx: { skip: 0 },
+});
 storiesOf('Checkbox', module).add('All Knobs', () => {
   let label = text('label', 'check me out');
   let checked = boolean('checked', false);
@@ -19,7 +22,7 @@ storiesOf('Checkbox', module).add('All Knobs', () => {
       {...(indeterminate && { indeterminate })}
       {...(required && { required })}
       {...(label && { label })}
-      onChange={action('onChange')}
+      onChange={callback(action('onChange'))}
     />
   );
 });

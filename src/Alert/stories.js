@@ -1,8 +1,13 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { addParameters, storiesOf } from '@storybook/react';
 import { boolean, select, text } from '@storybook/addon-knobs/react';
 import Alert from './index';
 import { action } from '@storybook/addon-actions';
+import { callback } from '../storyUtils';
+
+addParameters({
+  jsx: { skip: 0 },
+});
 
 const TYPES = {
   info: 'info',
@@ -24,8 +29,8 @@ storiesOf('Alert', module).add('All Knobs', () => {
       {...(status && { status })}
       {...(persist && { persist })}
       {...(type && { type })}
-      onDismiss={action('onDismiss')}
-      onSubmit={action('onSubmit')}
+      onDismiss={callback(action('onDismiss'))}
+      onSubmit={callback(action('onSubmit'))}
     >
       {content}
     </Alert>

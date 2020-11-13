@@ -1,11 +1,15 @@
 import { action } from '@storybook/addon-actions';
 import { boolean, text, select } from '@storybook/addon-knobs';
-import { storiesOf } from '@storybook/react';
+import { addParameters, storiesOf } from '@storybook/react';
 import React, { useState } from 'react';
 import Search from '../Search';
 import SearchAssist from './SearchAssist';
-import { InputContainer } from '../storyUtils';
+import { callback, InputContainer } from '../storyUtils';
 import { POSITIONS } from '../constants';
+
+addParameters({
+  jsx: { skip: 1 },
+});
 
 storiesOf('Search', module)
   .add('All Knobs', () => {
@@ -24,7 +28,7 @@ storiesOf('Search', module)
           {...(optional && { optional })}
           {...(required && { required })}
           {...(position && { position })}
-          onChange={action('change')}
+          onChange={callback(action('change'))}
           autoComplete="off"
         />
       </InputContainer>
@@ -45,11 +49,11 @@ storiesOf('Search', module)
           onChange={(e) => setValue(e.target.value)}
           value={value}
           onClear={(e) => {
-            action('onClear');
+            callback(action('onClear'));
             setValue('');
           }}
-          onFocus={(e) => action('onFocus')}
-          onBlur={(e) => action('onBlur')}
+          onFocus={(e) => callback(action('onFocus'))}
+          onBlur={(e) => callback(action('onBlur'))}
           autoComplete="off"
           {...(disabled && { disabled })}
           {...(label && { label })}

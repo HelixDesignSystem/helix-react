@@ -2,10 +2,13 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { optionsKnob as options } from '@storybook/addon-knobs';
 import { boolean, select, text } from '@storybook/addon-knobs/react';
-import { storiesOf } from '@storybook/react';
-
+import { addParameters, storiesOf } from '@storybook/react';
 import ChoiceTile from './index';
-import { getShortText } from '../storyUtils';
+import { callback, getShortText } from '../storyUtils';
+
+addParameters({
+  jsx: { skip: 0 },
+});
 
 const SIZES = {
   small: 'small',
@@ -45,7 +48,7 @@ storiesOf('Choice Tile', module).add('All Knobs', () => {
         {...(size && { size })}
         icon={icon}
         name="choiceTileDemo"
-        onChange={action('onChange')}
+        onChange={callback(action('onChange'))}
         style={{ width: 200, float: 'left' }}
         title={title || defaultTitle}
       >

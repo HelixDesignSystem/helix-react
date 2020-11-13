@@ -1,11 +1,15 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { addParameters, storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs/react';
 import Modal from './index';
 import Div from '../Div';
 import Button from '../Button';
-import { getLongText } from '../storyUtils';
+import { callback, getLongText } from '../storyUtils';
+
+addParameters({
+  jsx: { skip: 0 },
+});
 
 const SIZES = {
   small: 'small',
@@ -35,8 +39,8 @@ storiesOf('Modal', module).add('All Knobs', () => {
       {...(open && { open })}
       {...(size && { size })}
       open={open}
-      onOpen={action('onOpen')}
-      onClose={action('onClose')}
+      onOpen={callback(action('onOpen'))}
+      onClose={callback(action('onClose'))}
     >
       {header && (
         <header>
