@@ -19,39 +19,39 @@ storiesOf('Text', module).add('All Knobs', () => {
   return (
     <>
       <InputContainer>
-      <Text
-        id="textDemo"
-        {...(disabled && { disabled })}
-        {...(required && { required })}
-        {...(optional && { optional })}
-        label="Username"
-        onChange={callback(action('onChange'))}
-      />
+        <Text
+          id="textDemo"
+          {...(disabled && { disabled })}
+          {...(required && { required })}
+          {...(optional && { optional })}
+          label="Username"
+          onChange={callback(action('onChange'))}
+        />
 
-      <br />
-      <h3>Prefix</h3>
-      <Text
-        id="textDemo1"
-        {...(disabled && { disabled })}
-        {...(required && { required })}
-        {...(optional && { optional })}
-        {...(prefix && { prefix })}
-        label="twitter handle"
-        onChange={callback(action('onChange'))}
-      />
+        <br />
+        <h3>Prefix</h3>
+        <Text
+          id="textDemo1"
+          {...(disabled && { disabled })}
+          {...(required && { required })}
+          {...(optional && { optional })}
+          {...(prefix && { prefix })}
+          label="twitter handle"
+          onChange={callback(action('onChange'))}
+        />
 
-      <br />
-      <h3>Suffix</h3>
-      <Text
-        id="textDemo2"
-        {...(disabled && { disabled })}
-        {...(required && { required })}
-        {...(optional && { optional })}
-        {...(suffix && { suffix })}
-        label="Subdomain"
-        onChange={callback(action('onChange'))}
-      />
-    </InputContainer>
+        <br />
+        <h3>Suffix</h3>
+        <Text
+          id="textDemo2"
+          {...(disabled && { disabled })}
+          {...(required && { required })}
+          {...(optional && { optional })}
+          {...(suffix && { suffix })}
+          label="Subdomain"
+          onChange={callback(action('onChange'))}
+        />
+      </InputContainer>
     </>
   );
 });

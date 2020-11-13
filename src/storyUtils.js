@@ -24,8 +24,8 @@ export const InputContainer = ({ children }) => (
  * Overrides the toString on a function so that it addon-jsx prints
  * the callbacks in a copy-paste-able way.
  */
-export const callback = fn => {
- /** A toString to render the function in storybook */
- fn.toString = () => "() => {}";
- return fn;
+export const callback = (fn) => {
+  /** A toString to render the function in storybook */
+  fn.toString = () => '() => {}';
+  return fn;
 };

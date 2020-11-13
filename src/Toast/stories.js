@@ -6,7 +6,7 @@ import { action } from '@storybook/addon-actions';
 import { callback } from '../storyUtils';
 
 addParameters({
-  jsx: { skip:0 },
+  jsx: { skip: 0 },
 });
 
 const TYPES = {

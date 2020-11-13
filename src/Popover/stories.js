@@ -26,7 +26,7 @@ storiesOf('Popover', module)
     const longText = [1, 2, 3, 4, 5].map(() => <p>{getLongText()}</p>);
     const defaultFooter = [
       <Button variant="primary">Ok</Button>,
-      <Button variant="tertiary">Cancel</Button>
+      <Button variant="tertiary">Cancel</Button>,
     ];
     return (
       <>

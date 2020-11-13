@@ -1,7 +1,7 @@
 import centered from '@storybook/addon-centered/react';
 import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
-import { storiesOf, addParameters} from '@storybook/react';
+import { storiesOf, addParameters } from '@storybook/react';
 import React from 'react';
 import Select from '../Select';
 import { callback, InputContainer } from '../storyUtils';
