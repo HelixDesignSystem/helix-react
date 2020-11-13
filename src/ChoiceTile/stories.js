@@ -7,7 +7,7 @@ import ChoiceTile from './index';
 import { callback, getShortText } from '../storyUtils';
 
 addParameters({
-  jsx: { skip: 0 },
+  jsx: { skip: 1 },
 });
 
 const SIZES = {

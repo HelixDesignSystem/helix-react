@@ -110,6 +110,7 @@ Follow the [Getting Started with HelixUI](https://helixdesignsystem.github.io/he
   </footer>
 </Modal>
 ```
+[See Helix-React Storybook docs for more examples](https://helix-react.netlify.app/)
 
 ## Guiding Principles
 
