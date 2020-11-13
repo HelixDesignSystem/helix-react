@@ -10,8 +10,6 @@
   A React wrapper of the [Helix UI Webcomponents Library](https://github.com/HelixDesignSystem/helix-ui/)
   
   🚀 Alpha release is [here](https://helix-react.netlify.app)! Check out how to get started below! 🌻
- 
-  
 </div>
 
 <hr />
@@ -25,7 +23,6 @@
   - [Helix UI Webcomponent Snippet From Documentation](#helix-ui-webcomponent-snippet-from-documentation)
   - [Our Implementation](#our-implementation)
 - [Guiding Principles](#guiding-principles)
-- [Storybook](#-storybook)
 - [Issues](#issues)
   - [🐛 Bugs](#-bugs)
   - [💡 Feature Requests](#-feature-requests)
@@ -118,27 +115,6 @@ We try to only expose basic wrappers of Helix UI webcomponents.
 Each wrapper corresponds with a component listed on the [Helix UI documentation](https://helixdesignsystem.github.io/helix-ui/):
 
 ![helix-ui-documentation](https://user-images.githubusercontent.com/22566333/82083617-07f70700-96b8-11ea-9581-da1796737e52.png)
-
-## 📚 Storybook
-[Storybook](https://storybook.js.org/) is an open source tool for developing UI components
-in isolation for React, Vue, and Angular.
-You can use this as a playground for all our components.
-
-1. Install Dependencies
-
-```bash
-yarn install
-```
-
-2. Run Storybook
-
-```bash
-npm start
-```
-The script should automatically open Storybook in your browser, but you can always navigate to `http://localhost:6006/?path=/story`
-
-3. Play Around
-<img width="639" alt="Screen Shot 2020-05-15 at 2 32 35 PM" src="https://user-images.githubusercontent.com/22566333/82084224-f5c99880-96b8-11ea-92e2-403b3f4378db.png">
 
 ## Issues
 
