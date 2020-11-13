@@ -27,12 +27,10 @@ storiesOf('Modal', module).add('All Knobs', () => {
   const smallText =
     'This is the body of a demo modal. Interaction with content behind this modal cannot take place until this modal is closed.\n';
   const longText = [1, 2, 3, 4, 5].map(() => <p>{getLongText()}</p>);
-  const defaultFooter = (
-    <>
-      <Button variant="primary">Confirm</Button>
+  const defaultFooter = [
+      <Button variant="primary">Confirm</Button>,
       <Button variant="tertiary">Cancel</Button>
-    </>
-  );
+  ];
 
   return (
     <Modal
