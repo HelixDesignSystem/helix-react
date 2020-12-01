@@ -138,6 +138,27 @@ a 👍. This helps maintainers prioritize what to work on.
 
 For questions related to using the library, please file an issue on GitHub.
 
+## 📚 Setting up a Local Dev Environment	
+[Storybook](https://storybook.js.org/) is an open source tool for developing UI components	
+in isolation for React, Vue, and Angular.	
+You can use this as a playground for all our components.	
+
+1. Install Dependencies	
+
+```bash	
+yarn install	
+```	
+
+2. Run Storybook	
+
+```bash	
+npm start	
+```	
+The script should automatically open Storybook in your browser, but you can always navigate to `http://localhost:6006/?path=/story`	
+
+3. Play Around	
+<img width="639" alt="Screen Shot 2020-05-15 at 2 32 35 PM" src="https://user-images.githubusercontent.com/22566333/82084224-f5c99880-96b8-11ea-92e2-403b3f4378db.png">
+
 ## Contributors
 
 Thanks goes to these people:
