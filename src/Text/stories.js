@@ -1,9 +1,13 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs/react';
-import { storiesOf } from '@storybook/react';
+import { addParameters, storiesOf } from '@storybook/react';
 import Text from './index';
-import { InputContainer } from '../storyUtils';
+import { callback, InputContainer } from '../storyUtils';
+
+addParameters({
+  jsx: { skip: 2 },
+});
 
 storiesOf('Text', module).add('All Knobs', () => {
   let disabled = boolean('disabled', false);
@@ -21,12 +25,11 @@ storiesOf('Text', module).add('All Knobs', () => {
           {...(required && { required })}
           {...(optional && { optional })}
           label="Username"
-          onChange={action('onChange')}
+          onChange={callback(action('onChange'))}
         />
-      </InputContainer>
 
-      <h3>Prefix</h3>
-      <InputContainer>
+        <br />
+        <h3>Prefix</h3>
         <Text
           id="textDemo1"
           {...(disabled && { disabled })}
@@ -34,12 +37,11 @@ storiesOf('Text', module).add('All Knobs', () => {
           {...(optional && { optional })}
           {...(prefix && { prefix })}
           label="twitter handle"
-          onChange={action('onChange')}
+          onChange={callback(action('onChange'))}
         />
-      </InputContainer>
 
-      <h3>Suffix</h3>
-      <InputContainer>
+        <br />
+        <h3>Suffix</h3>
         <Text
           id="textDemo2"
           {...(disabled && { disabled })}
@@ -47,7 +49,7 @@ storiesOf('Text', module).add('All Knobs', () => {
           {...(optional && { optional })}
           {...(suffix && { suffix })}
           label="Subdomain"
-          onChange={action('onChange')}
+          onChange={callback(action('onChange'))}
         />
       </InputContainer>
     </>

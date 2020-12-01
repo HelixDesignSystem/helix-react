@@ -1,11 +1,14 @@
 import centered from '@storybook/addon-centered/react';
 import { action } from '@storybook/addon-actions';
-import { boolean, text } from '@storybook/addon-knobs';
-import { storiesOf } from '@storybook/react';
+import { boolean } from '@storybook/addon-knobs';
+import { storiesOf, addParameters } from '@storybook/react';
 import React from 'react';
-
 import Select from '../Select';
-import { InputContainer } from '../storyUtils';
+import { callback, InputContainer } from '../storyUtils';
+
+addParameters({
+  jsx: { skip: 3 },
+});
 
 storiesOf('Select', module)
   .addDecorator(centered)
@@ -13,34 +16,21 @@ storiesOf('Select', module)
     let disabled = boolean('disabled', false);
     let optional = boolean('optional', false);
     let required = boolean('required', false);
-
     return (
-      <Demo
-        {...(disabled && { disabled })}
-        label="Select Me"
-        {...(optional && { optional })}
-        {...(required && { required })}
-      />
+      <InputContainer>
+        <Select
+          id="my-select"
+          label="Select Me"
+          onChange={callback(action(`selected`))}
+          {...(disabled && { disabled })}
+          {...(optional && { optional })}
+          {...(required && { required })}
+        >
+          <option value="">--Please choose an option--</option>
+          <option value="derp">Some option</option>
+          <option value="chirp">Another option</option>
+          <option value="slurp">Third option</option>
+        </Select>
+      </InputContainer>
     );
   });
-
-const Demo = (props) => {
-  return (
-    <InputContainer>
-      <Select id="my-select" label="Select" onChange={action(`selected`)} {...props}>
-        <Options />
-      </Select>
-    </InputContainer>
-  );
-};
-
-const Options = () => {
-  return (
-    <React.Fragment>
-      <option value="">--Please choose an option--</option>
-      <option value="derp">Some option</option>
-      <option value="chirp">Another option</option>
-      <option value="slurp">Third option</option>
-    </React.Fragment>
-  );
-};

@@ -2,7 +2,9 @@ import { configure, addDecorator, setAddon } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import HelixUI from 'helix-ui';
 import 'helix-ui/dist/css/helix-ui.min.css';
+import { jsxDecorator } from 'storybook-addon-jsx';
 
+addDecorator(jsxDecorator);
 addDecorator(withKnobs);
 
 // Requires require.context from Webpack

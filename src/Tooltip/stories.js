@@ -1,10 +1,15 @@
 import centered from '@storybook/addon-centered/react';
-import { storiesOf } from '@storybook/react';
+import { addParameters, storiesOf } from '@storybook/react';
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { select, text } from '@storybook/addon-knobs/react';
 import Tooltip from '../Tooltip';
 import { POSITIONS } from '../constants';
+import { callback } from '../storyUtils';
+
+addParameters({
+  jsx: { skip: 3 },
+});
 
 const id = 'tooltipDemo';
 
@@ -20,9 +25,9 @@ storiesOf('Tooltip', module)
         <Tooltip
           id={id}
           position={position}
-          onOpen={action('onOpen')}
-          onClose={action('onClose')}
-          onReposition={action('onReposition')}
+          onOpen={callback(action('onOpen'))}
+          onClose={callback(action('onClose'))}
+          onReposition={callback(action('onReposition'))}
         >
           {content}
         </Tooltip>

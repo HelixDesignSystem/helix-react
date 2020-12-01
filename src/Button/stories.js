@@ -2,8 +2,12 @@ import Button from './';
 import { Icons } from '../Icon';
 import React from 'react';
 import centered from '@storybook/addon-centered/react';
-import { storiesOf } from '@storybook/react';
+import { addParameters, storiesOf } from '@storybook/react';
 import { boolean, select, text } from '@storybook/addon-knobs/react';
+
+addParameters({
+  jsx: { skip: 2 },
+});
 
 const SIZES = {
   small: 'Small',

@@ -1,10 +1,15 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs/react';
-import { storiesOf } from '@storybook/react';
+import { addParameters, storiesOf } from '@storybook/react';
 
 import Radio from './index';
 import RadioSet from './RadioSet';
+import { callback } from '../storyUtils';
+
+addParameters({
+  jsx: { skip: 0 },
+});
 
 storiesOf('Radio', module)
   .add('All Knobs', () => {
@@ -19,7 +24,7 @@ storiesOf('Radio', module)
         {...(disabled && { disabled })}
         {...(required && { required })}
         {...(label && { label })}
-        onChange={action('onChange')}
+        onChange={callback(action('onChange'))}
       />
     );
   })
@@ -37,7 +42,7 @@ storiesOf('Radio', module)
           {...(checked && { checked })}
           {...(disabled && { disabled })}
           {...(required && { required })}
-          onChange={action('onChange')}
+          onChange={callback(action('onChange'))}
         />
         <Radio
           id="radioDemo2"
@@ -46,7 +51,7 @@ storiesOf('Radio', module)
           label="option 2"
           {...(disabled && { disabled })}
           {...(required && { required })}
-          onChange={action('onChange')}
+          onChange={callback(action('onChange'))}
         />
       </RadioSet>
     );
