@@ -12,7 +12,9 @@ addParameters({
 storiesOf('Text', module).add('All Knobs', () => {
   let disabled = boolean('disabled', false);
   let required = boolean('required', false);
+  let invalid = boolean('invalid', false);
   let optional = boolean('optional', false);
+  let label = text('label', 'Text Label');
   let prefix = text('prefix', '@');
   let suffix = text('suffix', '.example.com');
 
@@ -21,10 +23,11 @@ storiesOf('Text', module).add('All Knobs', () => {
       <InputContainer>
         <Text
           id="textDemo"
+          {...(label && { label })}
           {...(disabled && { disabled })}
           {...(required && { required })}
+          {...(invalid && { invalid })}
           {...(optional && { optional })}
-          label="Username"
           onChange={callback(action('onChange'))}
         />
 
