@@ -38,6 +38,7 @@ storiesOf('Text', module).add('All Knobs', () => {
           {...(disabled && { disabled })}
           {...(required && { required })}
           {...(optional && { optional })}
+          {...(invalid && { invalid })}
           {...(prefix && { prefix })}
           label="twitter handle"
           onChange={callback(action('onChange'))}
@@ -50,6 +51,7 @@ storiesOf('Text', module).add('All Knobs', () => {
           {...(disabled && { disabled })}
           {...(required && { required })}
           {...(optional && { optional })}
+          {...(invalid && { invalid })}
           {...(suffix && { suffix })}
           label="Subdomain"
           onChange={callback(action('onChange'))}

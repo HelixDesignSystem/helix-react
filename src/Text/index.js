@@ -27,7 +27,6 @@ const Text = ({
       >
         {label}
       </label>
-
       {prefix && <span className="hxPrefix">{prefix}</span>}
       {suffix && <span className="hxSuffix">{suffix}</span>}
       {children}
