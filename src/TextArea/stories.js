@@ -12,15 +12,18 @@ addParameters({
 storiesOf('TextArea', module).add('All Knobs', () => {
   let disabled = boolean('disabled', false);
   let required = boolean('required', false);
+  let invalid = boolean('invalid', false);
   let optional = boolean('optional', false);
+  let label = text('label', 'TextArea Label');
 
   return (
     <InputContainer>
       <TextArea
         id="textAreaDemo"
-        lable="Comments"
+        {...(label && { label })}
         {...(disabled && { disabled })}
         {...(required && { required })}
+        {...(invalid && { invalid })}
         {...(optional && { optional })}
         onChange={callback(action('onChange'))}
       />
