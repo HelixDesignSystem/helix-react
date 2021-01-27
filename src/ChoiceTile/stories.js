@@ -57,7 +57,9 @@ storiesOf('Choice Tile', module).add('All Knobs', () => {
 
       <ChoiceTile
         icon="bell"
-        radioInput={<input type="radio" name="choiceTileDemo" onChange={callback(action('onChange'))} />}
+        radioInput={
+          <input type="radio" name="choiceTileDemo" onChange={callback(action('onChange'))} />
+        }
         style={{ marginLeft: 25, width: 200, float: 'left' }}
         title="Other Choice"
       >
