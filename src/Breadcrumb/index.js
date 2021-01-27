@@ -22,7 +22,7 @@ const Breadcrumb = ({ children, icon = 'angle-right', addDelimiter = true, ...re
 
 Breadcrumb.propTypes = {
   icon: PropTypes.string,
-  children: PropTypes.func,
+  children: PropTypes.node,
 };
 
 export default Breadcrumb;

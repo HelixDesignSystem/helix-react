@@ -58,7 +58,7 @@ ChoiceTile.propTypes = {
   disabled: PropTypes.bool,
   icon: PropTypes.string,
   invalid: PropTypes.bool,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   onChange: PropTypes.func,
   size: PropTypes.oneOf(Object.keys(SIZES)),
   subdued: PropTypes.bool,
