@@ -35,7 +35,7 @@ class Button extends React.Component {
       <button className={classNames(this.props)} type={type || 'button'} {...props}>
         {headIcon && <Icon type={headIcon} />}
         {children && <span>{children}</span>}
-        {busy ? <Busy />: tailIcon && <Icon type={tailIcon} />}
+        {busy ? <Busy /> : tailIcon && <Icon type={tailIcon} />}
       </button>
     );
   }
