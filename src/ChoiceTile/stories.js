@@ -17,7 +17,6 @@ const SIZES = {
 };
 
 storiesOf('Choice Tile', module).add('All Knobs', () => {
-  let description = text('description', '');
   let title = text('title', '');
   let checked = boolean('checked', false);
   let disabled = boolean('disabled', false);

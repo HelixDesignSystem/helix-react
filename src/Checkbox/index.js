@@ -13,7 +13,7 @@ const Checkbox = React.forwardRef(
       <hx-checkbox-control class={className}>
         <input ref={hxRef} {...rest} id={id} type="checkbox" />
         <label htmlFor={id}>
-          <hx-checkbox></hx-checkbox>
+          <hx-checkbox />
           {label}
         </label>
       </hx-checkbox-control>

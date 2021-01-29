@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../Icon';
+import Busy from '../Busy';
 
 function cssFor(modifier) {
   return {
@@ -34,7 +35,7 @@ class Button extends React.Component {
       <button className={classNames(this.props)} type={type || 'button'} {...props}>
         {headIcon && <Icon type={headIcon} />}
         {children && <span>{children}</span>}
-        {busy ? <hx-busy></hx-busy> : tailIcon && <Icon type={tailIcon} />}
+        {busy ? <Busy />: tailIcon && <Icon type={tailIcon} />}
       </button>
     );
   }

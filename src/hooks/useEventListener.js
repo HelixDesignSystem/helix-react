@@ -12,11 +12,11 @@ function useEventListener(eventHandlers = {}, ref) {
   const theRef = ref ? useCombinedRefs(ref, useRef(null)) : useRef(null);
 
   useEffect(() => {
-    Object.entries(eventHandlers).forEach(([handlerName, eventHandler], key) => {
+    Object.entries(eventHandlers).forEach(([handlerName, eventHandler]) => {
       theRef.current.addEventListener(handlerNameToEvent(handlerName), eventHandler);
     });
     return () => {
-      Object.entries(eventHandlers).forEach(([handlerName, eventHandler], key) => {
+      Object.entries(eventHandlers).forEach(([handlerName, eventHandler]) => {
         theRef.current.removeEventListener(handlerNameToEvent(handlerName), eventHandler);
       });
     };
