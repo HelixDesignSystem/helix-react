@@ -6,6 +6,7 @@ import { select, text } from '@storybook/addon-knobs/react';
 import Tooltip from '../Tooltip';
 import { POSITIONS } from '../constants';
 import { callback } from '../storyUtils';
+import Icon from '../Icon';
 
 addParameters({
   jsx: { skip: 3 },
@@ -19,15 +20,18 @@ storiesOf('Tooltip', module)
     let position = select('positions', POSITIONS, 'top-left');
     let content = text('content', 'I am a tool tip');
 
+    const myRef = React.useRef();
+
     return (
       <>
-        <hx-icon id={id} type="help-circle" />
+        <Icon id={id} type="help-circle" />
         <Tooltip
           id={id}
           position={position}
           onOpen={callback(action('onOpen'))}
           onClose={callback(action('onClose'))}
           onReposition={callback(action('onReposition'))}
+          ref={myRef}
         >
           {content}
         </Tooltip>

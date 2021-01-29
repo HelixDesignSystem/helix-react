@@ -2,16 +2,16 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
 
-const Switch = ({ id, className, onLabel, offLabel, invalid, ...rest }) => {
+const Switch = React.forwardRef(({ id, className, onLabel, offLabel, invalid, ...rest }, ref) => {
   return (
-    <hx-switch-control class={classnames('switch', className)}>
+    <hx-switch-control class={classnames('switch', className)} ref={ref}>
       <input type="checkbox" id={id} {...rest} invalid={invalid?.toString()} />
       <label htmlFor={id}>
         <hx-switch onlabel={onLabel} offlabel={offLabel} aria-labelledby={id} />
       </label>
     </hx-switch-control>
   );
-};
+});
 
 Switch.propTypes = {
   id: PropTypes.string.isRequired,
@@ -30,4 +30,5 @@ Switch.defaultProps = {
   offLabel: '',
 };
 
+Switch.displayName = 'Switch';
 export default Switch;

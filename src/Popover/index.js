@@ -5,29 +5,24 @@ import useEventListener from '../hooks/useEventListener';
 import { POSITIONS } from '../constants';
 import { wcBool } from '../utils';
 
-const Popover = ({
-  onOpen,
-  onClose,
-  onReposition,
-  className,
-  open,
-  children,
-  relativeTo,
-  ...rest
-}) => {
-  const hxRef = useEventListener({ onOpen, onClose, onReposition });
-  return (
-    <hx-popover
-      class={classNames(className)}
-      ref={hxRef}
-      open={wcBool(open)}
-      relative-to={relativeTo}
-      {...rest}
-    >
-      {children}
-    </hx-popover>
-  );
-};
+const Popover = React.forwardRef(
+  ({ onOpen, onClose, onReposition, className, open, children, relativeTo, ...rest }, ref) => {
+    const hxRef = useEventListener({ onOpen, onClose, onReposition }, ref);
+    return (
+      <hx-popover
+        class={classNames(className)}
+        ref={hxRef}
+        open={wcBool(open)}
+        relative-to={relativeTo}
+        {...rest}
+      >
+        {children}
+      </hx-popover>
+    );
+  }
+);
+
+Popover.displayName = 'Popover';
 
 Popover.propTypes = {
   children: PropTypes.node.isRequired,

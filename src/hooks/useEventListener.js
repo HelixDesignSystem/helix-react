@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-
+import useCombinedRefs from './useCombinedRefs';
 const handlerNameToEvent = (handlerName) => handlerName.replace(/^on/, '').toLowerCase();
 
 /**
@@ -9,7 +9,8 @@ const handlerNameToEvent = (handlerName) => handlerName.replace(/^on/, '').toLow
  * @return {React.MutableRefObject}
  */
 function useEventListener(eventHandlers = {}, ref) {
-  const theRef = ref || useRef(null);
+  const theRef = ref ? useCombinedRefs(ref, useRef(null)) : useRef(null);
+
   useEffect(() => {
     Object.entries(eventHandlers).forEach(([handlerName, eventHandler], key) => {
       theRef.current.addEventListener(handlerNameToEvent(handlerName), eventHandler);
