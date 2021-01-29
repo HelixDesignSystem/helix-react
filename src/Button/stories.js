@@ -10,24 +10,25 @@ addParameters({
 });
 
 const SIZES = {
-  small: 'Small',
-  '': 'Medium',
-  large: 'Large',
+  small: 'small',
+  medium: 'medium',
+  large: 'large',
 };
+
 const VARIANTS = {
-  primary: 'Primary',
-  '': 'Secondary',
-  tertiary: 'Tertiary',
+  primary: 'primary',
+  secondary: 'secondary',
+  tertiary: 'tertiary',
 };
 
 storiesOf('Button', module)
   .addDecorator(centered)
   .add('Sizes', () => {
-    const size = select('size', SIZES, '');
+    const size = select('size', SIZES, 'medium');
     return <Button {...(size && { size })}>{SIZES[size]} Button</Button>;
   })
   .add('Variants', () => {
-    const variant = select('variant', VARIANTS, '');
+    const variant = select('variant', VARIANTS, 'primary');
     return <Button {...(variant && { variant })}>{VARIANTS[variant]} Button</Button>;
   })
   .add('Icon Only', () => {
