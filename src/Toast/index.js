@@ -7,7 +7,7 @@ const Toast = React.forwardRef(
     const hxRef = useEventListener({ onDismiss, onSubmit }, ref);
     return (
       <div>
-        {/* Wrapping element needed: Otherwise when alert removes itself from DOM on close, it will cause error */}
+        {/* Wrapping element needed: Otherwise when hx-toast removes itself from DOM on close, it will cause error */}
         <hx-toast class={className} ref={hxRef} {...rest}>
           {children}
         </hx-toast>

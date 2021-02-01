@@ -1,6 +1,5 @@
 import centered from '@storybook/addon-centered/react';
 import { addParameters, storiesOf } from '@storybook/react';
-import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { select, text } from '@storybook/addon-knobs/react';
 import Tooltip from '../Tooltip';
@@ -20,8 +19,6 @@ storiesOf('Tooltip', module)
     let position = select('positions', POSITIONS, 'top-left');
     let content = text('content', 'I am a tool tip');
 
-    const myRef = React.useRef();
-
     return (
       <>
         <Icon id={id} type="help-circle" />
@@ -31,7 +28,6 @@ storiesOf('Tooltip', module)
           onOpen={callback(action('onOpen'))}
           onClose={callback(action('onClose'))}
           onReposition={callback(action('onReposition'))}
-          ref={myRef}
         >
           {content}
         </Tooltip>
