@@ -2,37 +2,36 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
 
-const Text = ({
-  id,
-  label,
-  invalid,
-  className,
-  required,
-  optional,
-  children,
-  prefix,
-  suffix,
-  style,
-  ...rest
-}) => {
-  return (
-    <hx-text-control class={classnames(className, { hxInvalid: invalid })} style={style}>
-      <input {...rest} id={id} required={required} type="text" />
-      <label
-        className={classnames({
-          hxOptional: optional,
-          hxRequired: required,
-        })}
-        htmlFor={id}
+const Text = React.forwardRef(
+  (
+    { id, label, invalid, className, required, optional, children, prefix, suffix, style, ...rest },
+    ref
+  ) => {
+    return (
+      <hx-text-control
+        class={classnames(className, { hxInvalid: invalid })}
+        style={style}
+        ref={ref}
       >
-        {label}
-      </label>
-      {prefix && <span className="hxPrefix">{prefix}</span>}
-      {suffix && <span className="hxSuffix">{suffix}</span>}
-      {children}
-    </hx-text-control>
-  );
-};
+        <input {...rest} id={id} required={required} type="text" />
+        <label
+          className={classnames({
+            hxOptional: optional,
+            hxRequired: required,
+          })}
+          htmlFor={id}
+        >
+          {label}
+        </label>
+        {prefix && <span className="hxPrefix">{prefix}</span>}
+        {suffix && <span className="hxSuffix">{suffix}</span>}
+        {children}
+      </hx-text-control>
+    );
+  }
+);
+
+Text.displayName = 'Text';
 
 Text.propTypes = {
   id: PropTypes.string.isRequired,

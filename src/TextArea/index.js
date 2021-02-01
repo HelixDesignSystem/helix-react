@@ -2,34 +2,34 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
 
-const TextArea = ({
-  id,
-  label,
-  className,
-  required,
-  disabled,
-  optional,
-  invalid,
-  children,
-  style,
-  ...rest
-}) => {
-  return (
-    <hx-textarea-control class={classnames(className, { hxInvalid: invalid })} style={style}>
-      <textarea {...rest} id={id} required={required} disabled={disabled} />
-      <label
-        className={classnames({
-          hxOptional: optional,
-          hxRequired: required,
-        })}
-        htmlFor={id}
+const TextArea = React.forwardRef(
+  (
+    { id, label, className, required, disabled, optional, invalid, children, style, ...rest },
+    ref
+  ) => {
+    return (
+      <hx-textarea-control
+        class={classnames(className, { hxInvalid: invalid })}
+        style={style}
+        ref={ref}
       >
-        {label}
-      </label>
-      {children}
-    </hx-textarea-control>
-  );
-};
+        <textarea {...rest} id={id} required={required} disabled={disabled} />
+        <label
+          className={classnames({
+            hxOptional: optional,
+            hxRequired: required,
+          })}
+          htmlFor={id}
+        >
+          {label}
+        </label>
+        {children}
+      </hx-textarea-control>
+    );
+  }
+);
+
+TextArea.displayName = 'TextArea';
 
 TextArea.propTypes = {
   id: PropTypes.string.isRequired,

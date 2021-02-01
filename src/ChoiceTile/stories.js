@@ -17,7 +17,6 @@ const SIZES = {
 };
 
 storiesOf('Choice Tile', module).add('All Knobs', () => {
-  let description = text('description', '');
   let title = text('title', '');
   let checked = boolean('checked', false);
   let disabled = boolean('disabled', false);
@@ -52,16 +51,18 @@ storiesOf('Choice Tile', module).add('All Knobs', () => {
         style={{ width: 200, float: 'left' }}
         title={title || defaultTitle}
       >
-        {<p>{description || defaultDescription}</p>}
+        {<p>{'standard choice tile' || defaultDescription}</p>}
       </ChoiceTile>
 
       <ChoiceTile
         icon="bell"
-        name="choiceTileDemo"
+        radioInput={
+          <input type="radio" name="choiceTileDemo" onChange={callback(action('onChange'))} />
+        }
         style={{ marginLeft: 25, width: 200, float: 'left' }}
         title="Other Choice"
       >
-        {<p>{defaultDescription}</p>}
+        {<p>custom radio (see JSX)</p>}
       </ChoiceTile>
     </React.Fragment>
   );

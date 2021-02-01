@@ -6,20 +6,24 @@ import { SIZES } from '../constants';
 import useEventListener from '../hooks/useEventListener';
 import { wcBool } from '../utils';
 
-const Drawer = ({ children, className, id, onClose, onOpen, open, size, ...rest }) => {
-  const hxRef = useEventListener({ onOpen, onClose });
-  return (
-    <hx-drawer
-      class={classnames(className, SIZES[size])}
-      id={id}
-      open={wcBool(open)}
-      ref={hxRef}
-      {...rest}
-    >
-      {children}
-    </hx-drawer>
-  );
-};
+const Drawer = React.forwardRef(
+  ({ children, className, id, onClose, onOpen, open, size, ...rest }, ref) => {
+    const hxRef = useEventListener({ onOpen, onClose }, ref);
+    return (
+      <hx-drawer
+        class={classnames(className, SIZES[size])}
+        id={id}
+        open={wcBool(open)}
+        ref={hxRef}
+        {...rest}
+      >
+        {children}
+      </hx-drawer>
+    );
+  }
+);
+
+Drawer.displayName = 'Drawer';
 
 Drawer.propTypes = {
   className: PropTypes.string,

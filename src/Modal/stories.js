@@ -29,7 +29,7 @@ storiesOf('Modal', module).add('All Knobs', () => {
   const longText = [1, 2, 3, 4, 5].map(() => <p>{getLongText()}</p>);
   const defaultFooter = [
     <Button variant="primary">Confirm</Button>,
-    <Button variant="tertiary">Cancel</Button>,
+    <Button variant="secondary">Cancel</Button>,
   ];
 
   return (

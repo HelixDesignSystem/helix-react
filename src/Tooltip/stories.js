@@ -1,11 +1,11 @@
 import centered from '@storybook/addon-centered/react';
 import { addParameters, storiesOf } from '@storybook/react';
-import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { select, text } from '@storybook/addon-knobs/react';
 import Tooltip from '../Tooltip';
 import { POSITIONS } from '../constants';
 import { callback } from '../storyUtils';
+import Icon from '../Icon';
 
 addParameters({
   jsx: { skip: 3 },
@@ -21,7 +21,7 @@ storiesOf('Tooltip', module)
 
     return (
       <>
-        <hx-icon id={id} type="help-circle" />
+        <Icon id={id} type="help-circle" />
         <Tooltip
           id={id}
           position={position}

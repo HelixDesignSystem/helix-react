@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Radio = ({ id, label, className, style, ...rest }) => {
+const Radio = React.forwardRef(({ id, label, className, style, ...rest }, ref) => {
   return (
-    <hx-radio-control class={className} style={style}>
+    <hx-radio-control class={className} style={style} ref={ref}>
       <input {...rest} id={id} type="radio" />
       <label htmlFor={id}>
         <hx-radio></hx-radio>
@@ -11,7 +11,7 @@ const Radio = ({ id, label, className, style, ...rest }) => {
       </label>
     </hx-radio-control>
   );
-};
+});
 
 Radio.propTypes = {
   label: PropTypes.string.isRequired,
@@ -25,4 +25,5 @@ Radio.propTypes = {
   onChange: PropTypes.func,
 };
 
+Radio.displayName = 'Radio';
 export default Radio;

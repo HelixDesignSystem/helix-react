@@ -8,7 +8,7 @@ const Breadcrumb = ({ children, icon = 'angle-right', addDelimiter = true, ...re
       ? children.map((child, index) => [
           child,
           addDelimiter && index + 1 < children.length && (
-            <hx-icon class="delimiter" type={icon}></hx-icon>
+            <hx-icon key={index} class="delimiter" type={icon} />
           ),
         ])
       : children;
@@ -22,7 +22,7 @@ const Breadcrumb = ({ children, icon = 'angle-right', addDelimiter = true, ...re
 
 Breadcrumb.propTypes = {
   icon: PropTypes.string,
-  children: PropTypes.func,
+  children: PropTypes.node,
 };
 
 export default Breadcrumb;

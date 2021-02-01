@@ -3,14 +3,18 @@ import React from 'react';
 import { POSITIONS } from '../constants';
 import useEventListener from '../hooks/useEventListener';
 
-const Tooltip = ({ children, id, position, onClose, onOpen, onReposition, ...rest }) => {
-  const hxRef = useEventListener({ onClose, onOpen, onReposition });
-  return (
-    <hx-tooltip for={id} position={position} ref={hxRef} {...rest}>
-      {children}
-    </hx-tooltip>
-  );
-};
+const Tooltip = React.forwardRef(
+  ({ children, id, position, onClose, onOpen, onReposition, ...rest }, ref) => {
+    const hxRef = useEventListener({ onClose, onOpen, onReposition }, ref);
+    return (
+      <hx-tooltip for={id} position={position} ref={hxRef} {...rest}>
+        {children}
+      </hx-tooltip>
+    );
+  }
+);
+
+Tooltip.displayName = 'Tooltip';
 
 Tooltip.propTypes = {
   children: PropTypes.node.isRequired,
