@@ -18,7 +18,7 @@ const TextArea = React.forwardRef(
           <label
             className={classnames({
               hxOptional: optional,
-              hxRequired: required
+              hxRequired: required,
             })}
             htmlFor={id}
           >
