@@ -1,3 +1,4 @@
+import React from 'react';
 import centered from '@storybook/addon-centered/react';
 import { addParameters, storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
