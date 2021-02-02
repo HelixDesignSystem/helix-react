@@ -14,15 +14,17 @@ const Text = React.forwardRef(
         ref={ref}
       >
         <input {...rest} id={id} required={required} type="text" />
-        <label
-          className={classnames({
-            hxOptional: optional,
-            hxRequired: required,
-          })}
-          htmlFor={id}
-        >
-          {label}
-        </label>
+        {typeof label === 'undefined' && (
+          <label
+            className={classnames({
+              hxOptional: optional,
+              hxRequired: required
+            })}
+            htmlFor={id}
+          >
+            {label}
+          </label>
+        )}
         {prefix && <span className="hxPrefix">{prefix}</span>}
         {suffix && <span className="hxSuffix">{suffix}</span>}
         {children}

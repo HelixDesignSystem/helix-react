@@ -14,15 +14,17 @@ const TextArea = React.forwardRef(
         ref={ref}
       >
         <textarea {...rest} id={id} required={required} disabled={disabled} />
-        <label
-          className={classnames({
-            hxOptional: optional,
-            hxRequired: required,
-          })}
-          htmlFor={id}
-        >
-          {label}
-        </label>
+        {typeof label === 'undefined' && (
+          <label
+            className={classnames({
+              hxOptional: optional,
+              hxRequired: required
+            })}
+            htmlFor={id}
+          >
+            {label}
+          </label>
+        )}
         {children}
       </hx-textarea-control>
     );
