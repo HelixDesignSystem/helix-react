@@ -14,7 +14,7 @@ const Text = React.forwardRef(
         ref={ref}
       >
         <input {...rest} id={id} required={required} type="text" />
-        {typeof label === 'undefined' && (
+        {label && (
           <label
             className={classnames({
               hxOptional: optional,

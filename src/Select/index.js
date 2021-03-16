@@ -13,7 +13,7 @@ const Select = React.forwardRef(
           {children}
         </select>
         <hx-select></hx-select>
-        {typeof label === 'undefined' && (
+        {label && (
           <label
             className={classnames({
               hxOptional: optional,

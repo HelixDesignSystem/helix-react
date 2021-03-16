@@ -14,7 +14,7 @@ const TextArea = React.forwardRef(
         ref={ref}
       >
         <textarea {...rest} id={id} required={required} disabled={disabled} />
-        {typeof label === 'undefined' && (
+        {label && (
           <label
             className={classnames({
               hxOptional: optional,

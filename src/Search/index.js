@@ -57,7 +57,7 @@ const Search = React.forwardRef(
           <Icon type="times" />
         </button>
         <hx-search></hx-search>
-        {typeof label === 'undefined' && (
+        {label && (
           <label
             className={classnames({
               hxOptional: optional,
