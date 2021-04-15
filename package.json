@@ -1,6 +1,6 @@
 {
   "name": "@helix-design-system/helix-react",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "React components to wrap HelixUI Web Components Library",
   "source": "src/index.mjs",
   "main": "dist/helix-react.js",
