@@ -1,7 +1,7 @@
 {
   "name": "@helix-design-system/helix-react",
   "version": "2.0.0",
-  "description": "React components to wrap HelixUI custom elements",
+  "description": "React components to wrap HelixUI Web Components Library",
   "source": "src/index.mjs",
   "main": "dist/helix-react.js",
   "module": "dist/helix-react.esm.js",
@@ -29,7 +29,9 @@
     "James Thompson",
     "Cathy Siller",
     "Nicko Winner-Arroyo",
-    "Ryan A. Johnson"
+    "Ryan A. Johnson",
+    "Ana-Sophia Brande",
+    "Javed Khan"
   ],
   "license": "Apache-2.0",
   "bugs": {
