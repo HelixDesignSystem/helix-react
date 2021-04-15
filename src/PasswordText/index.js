@@ -11,14 +11,16 @@ const Password = React.forwardRef(
         ref={ref}
       >
         <input {...rest} id={id} required={required} placeholder={placeholder} type="password" />
-        <label
-          className={classnames({
-            hxRequired: required,
-          })}
-          htmlFor={id}
-        >
-          {label}
-        </label>
+        {label && (
+          <label
+            className={classnames({
+              hxRequired: required,
+            })}
+            htmlFor={id}
+          >
+            {label}
+          </label>
+        )}
         {children}
       </hx-password-control>
     );
