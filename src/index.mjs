@@ -24,6 +24,7 @@ import Text from './Text';
 import TextArea from './TextArea';
 import Toast from './Toast';
 import Tooltip from './Tooltip';
+import Password from './PasswordText';
 
 export {
   Alert,
@@ -51,4 +52,5 @@ export {
   TextArea,
   Toast,
   Tooltip,
+  Password,
 };
