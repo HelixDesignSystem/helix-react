@@ -10,6 +10,7 @@ import Div from './Div';
 import Drawer from './Drawer';
 import Icon from './Icon';
 import Modal from './Modal';
+import Password from './PasswordText';
 import Pill from './Pill';
 import Progress from './Progress';
 import Status from './Pill/Status';
@@ -24,7 +25,6 @@ import Text from './Text';
 import TextArea from './TextArea';
 import Toast from './Toast';
 import Tooltip from './Tooltip';
-import Password from './PasswordText';
 
 export {
   Alert,
@@ -38,6 +38,7 @@ export {
   Drawer,
   Icon,
   Modal,
+  Password,
   Pill,
   Popover,
   Progress,
@@ -52,5 +53,4 @@ export {
   TextArea,
   Toast,
   Tooltip,
-  Password,
 };
