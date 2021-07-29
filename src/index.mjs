@@ -10,6 +10,7 @@ import Div from './Div';
 import Drawer from './Drawer';
 import Icon from './Icon';
 import Modal from './Modal';
+import Password from './PasswordText';
 import Pill from './Pill';
 import Progress from './Progress';
 import Status from './Pill/Status';
@@ -37,6 +38,7 @@ export {
   Drawer,
   Icon,
   Modal,
+  Password,
   Pill,
   Popover,
   Progress,
